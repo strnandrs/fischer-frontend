@@ -1,0 +1,81 @@
+{
+  "name": "nav-item",
+  "display_name": "Nav Item",
+  "kind": "atom",
+  "intent": "navigation",
+  "description": "Level 1 of the main navigation. Either a direct link (no children) or a flyout trigger whose flyout holds overview links plus level-2 links/groups.",
+  "preview_field": "label",
+  "reused_by": [
+    "fischer#chrome",
+    "fischertechnik#chrome"
+  ],
+  "tabs": {
+    "Content": [
+      "label",
+      "link",
+      "overview_links",
+      "children"
+    ]
+  },
+  "fields": {
+    "label": {
+      "type": "text",
+      "display_name": "Label",
+      "required": true,
+      "max_length": 40,
+      "translatable": true,
+      "default": "Menu item",
+      "render": {
+        "as": "text"
+      }
+    },
+    "link": {
+      "type": "multilink",
+      "display_name": "Link",
+      "required": false,
+      "translatable": true,
+      "default": {
+        "linktype": "story",
+        "id": ""
+      },
+      "description": "Used only when the item has no children (direct link, e.g. Karriere / Shop).",
+      "render": {
+        "as": "link"
+      }
+    },
+    "overview_links": {
+      "type": "bloks",
+      "display_name": "Flyout overview links",
+      "component_whitelist": [
+        "nav-link"
+      ],
+      "restrict_components": true,
+      "max": 3,
+      "description": "Shown at the top of the flyout (e.g. 'Übersicht', 'Innovationen', 'Unser Produktsortiment').",
+      "render": {
+        "as": "children"
+      }
+    },
+    "children": {
+      "type": "bloks",
+      "display_name": "Flyout content",
+      "component_whitelist": [
+        "nav-group",
+        "nav-link"
+      ],
+      "restrict_components": true,
+      "max": 30,
+      "render": {
+        "as": "children"
+      }
+    }
+  },
+  "view": {
+    "name": "NavItem",
+    "root": "li",
+    "notes": "Flyout layout is derived from content: children with thumbnails -> thumbnail grid (fischer Produkte: 20 categories; fischertechnik Produkte: 5 tiles in 3 cols); nav-group children -> labelled columns (Service); plain nav-links -> simple list. Flyout: full-width, fixed under the 80px bar, bg #fff, shadow 0 10px 30px rgba(0,0,0,.06), close control 'Schließen' (code constant, translated via dictionary), opened on click. Active/hover marker: 3px var(--color-primary) underline.",
+    "content_constants": {
+      "flyout_close_label": "Schließen"
+    }
+  }
+}

@@ -1,0 +1,232 @@
+{
+  "name": "product-category",
+  "display_name": "Product Category",
+  "kind": "content_type",
+  "intent": "product-listing",
+  "description": "Start page of a category folder. Lists every product story in its folder automatically, with filters and optional highlighted products.",
+  "preview_field": "headline",
+  "reused_by": [
+    "fischer-products-category#1",
+    "fischer-products-category#2",
+    "fischertechnik-products-category#1",
+    "fischertechnik-products-category#2"
+  ],
+  "tabs": {
+    "Content": [
+      "headline",
+      "intro",
+      "result_label"
+    ],
+    "Categories": [
+      "subcategories"
+    ],
+    "Filters": [
+      "filter_layout",
+      "facets"
+    ],
+    "Highlights": [
+      "highlights_headline",
+      "highlighted_products",
+      "akeneo_products"
+    ],
+    "SEO": [
+      "title",
+      "description",
+      "og_image"
+    ]
+  },
+  "fields": {
+    "headline": {
+      "type": "text",
+      "display_name": "Headline",
+      "translatable": true,
+      "default": "Kategorie",
+      "required": true,
+      "max_length": 80,
+      "render": {
+        "as": "h1"
+      }
+    },
+    "intro": {
+      "type": "richtext",
+      "display_name": "Intro",
+      "translatable": true,
+      "customize_toolbar": true,
+      "toolbar": [
+        "bold",
+        "italic",
+        "olist",
+        "link",
+        "ai-complete",
+        "ai-shorten",
+        "ai-rephrase",
+        "ai-summarize",
+        "ai-extend",
+        "ai-simplify",
+        "ai-tone",
+        "ai-translate",
+        "ai-tldr",
+        "list",
+        "ai-spelling"
+      ],
+      "default": "",
+      "render": {
+        "as": "prose"
+      }
+    },
+    "result_label": {
+      "type": "text",
+      "display_name": "Result count text",
+      "translatable": true,
+      "default": "{count} Produkte gefunden",
+      "max_length": 100,
+      "render": {
+        "as": "text"
+      },
+      "description": "Placeholders: {count} = products shown, {variants} = sum of their variant counts. Updates live while filtering."
+    },
+    "subcategories": {
+      "type": "bloks",
+      "display_name": "Subcategories",
+      "component_whitelist": [
+        "nav-link"
+      ],
+      "restrict_components": true,
+      "max": 24,
+      "description": "Sidebar links (no images) or image chips (with thumbnails) above the results.",
+      "render": {
+        "as": "children",
+        "context": "category-nav"
+      }
+    },
+    "filter_layout": {
+      "type": "option",
+      "display_name": "Filter layout",
+      "datasource": "filter-layouts",
+      "default": "sidebar",
+      "render": {
+        "as": "variant"
+      }
+    },
+    "facets": {
+      "type": "bloks",
+      "display_name": "Filters",
+      "component_whitelist": [
+        "facet-filter"
+      ],
+      "restrict_components": true,
+      "max": 10,
+      "render": {
+        "as": "children",
+        "context": "listing"
+      }
+    },
+    "highlights_headline": {
+      "type": "text",
+      "display_name": "Highlights headline",
+      "translatable": true,
+      "default": "",
+      "max_length": 100,
+      "render": {
+        "as": "h2"
+      }
+    },
+    "highlighted_products": {
+      "type": "custom",
+      "field_type": "ext-picker-content",
+      "display_name": "Highlighted products",
+      "translatable": false,
+      "options": [
+        {
+          "name": "accessToken",
+          "value": "aD36neRXOoF2cUn8amTCxwtt"
+        },
+        {
+          "name": "version",
+          "value": "draft"
+        },
+        {
+          "name": "startsWith",
+          "value": ""
+        }
+      ],
+      "description": "Shown as a row above the full product list.",
+      "render": {
+        "as": "product-refs",
+        "component": "ProductRail"
+      },
+      "picker_contract": {
+        "plugin": "ext-picker-content (org field plugin; stored value shape UNKNOWN)",
+        "startsWith_note": "Field options are per component schema, NOT per brand. The shared schema can't hold 'fischer/produkte' AND 'fischertechnik/produkte'. Default = empty (all stories; renderer keeps only component 'product'). If the plugin supports a path placeholder (e.g. '{0}/produkte' = first segment of the current story), set that instead. Open question #1.",
+        "normalize": "normalizeProductRefs(value): value may be an array, or an object with items|stories|value|selected array. Each entry may be a string (uuid = 36-char UUID; numeric = id; else full_slug/slug) or an object carrying uuid | id | full_slug | slug (also nested under .story or .content). Output: ordered, de-duplicated list of {uuid?|id?|full_slug?}. Unknown shapes -> [] + console.warn with the raw value (dev only).",
+        "fetch": "uuids -> cdn/stories?by_uuids_ordered=...; full_slugs -> cdn/stories?by_slugs=...; ids -> cdn/stories/{id} (parallel). Always pass language = current locale and the same version as the page (draft in preview). Keep only story.content.component === 'product'; keep editor order.",
+        "render": "ProductTile per product (shared renderer component, NOT an editor block); variant per brand theme preset.",
+        "fallback": {
+          "type": "options",
+          "source": "internal_stories",
+          "filter_content_type": [
+            "product"
+          ],
+          "folder_slug": "{0}/produkte/",
+          "note": "Native Storyblok multi-story reference (stores uuids, editor order). '{0}' = first path segment of the edited story = brand folder, so the native fallback IS brand-scoped. Same normalize/fetch path (uuids)."
+        }
+      }
+    },
+    "title": {
+      "type": "text",
+      "display_name": "SEO title",
+      "max_length": 70,
+      "translatable": true,
+      "default": "",
+      "description": "Defaults to the product/category name when empty.",
+      "render": {
+        "as": "meta"
+      }
+    },
+    "description": {
+      "type": "textarea",
+      "display_name": "SEO description",
+      "max_length": 160,
+      "translatable": true,
+      "default": "",
+      "render": {
+        "as": "meta"
+      }
+    },
+    "og_image": {
+      "type": "asset",
+      "display_name": "Social image",
+      "filetypes": [
+        "images"
+      ],
+      "translatable": true,
+      "default": {},
+      "description": "Defaults to the first gallery image when empty.",
+      "render": {
+        "as": "meta"
+      }
+    },
+    "akeneo_products": {
+      "type": "custom",
+      "field_type": "sb-akeneo",
+      "display_name": "Zusätzliche Produkte (Akeneo PIM)",
+      "translatable": true,
+      "description": "Products picked from Akeneo (PIM) — appended to the recommendations row after the Storyblok products. Same plugin config as the Miles & More COM demo space (offer-page.akeneo_products)."
+    }
+  },
+  "view": {
+    "name": "ProductCategory",
+    "root": "div",
+    "notes": "Server: fetch cdn/stories?starts_with={full_slug of this folder}&content_type=product&per_page=100&sort_by=position:asc (+ language, version) — EXCLUDES the startpage. Hand products + facet config to <ProductListing> (client) for filtering/counts. Structure: H1 row (48/58 600, 30px above/below, 12-col container); intro prose below H1 (narrow); then layout: SIDEBAR (fischer#2): left col 210 = 'Kategorien' box (header 48px bg var(--color-secondary) white 16/600 pl 18; links 14/24 600 p12 1px var(--color-panel-strong) bottom border + chevron) then 'Filter' box (same header) with facet accordions; right = count line 16/300 mb 6 + 5-col grid 210 tiles gap 24 (1146). TOP-BAR (fischertechnik#2): facet bar (padding 24 30) -> 'Kategorien' image chips 5/row 257 wide (image 257x145 + label 16/600 p 24 on var(--color-panel), static links) -> panel band var(--color-panel) with count line + 5-col grid of 257 tiles gap 24. Highlights row (if picked): above the count line, ProductTiles in the same grid geometry with h2. No pagination (source renders all). Empty filter result -> short 'Keine Produkte gefunden' (i18n dict). Breadcrumb from the layout.",
+    "styling_cues": {
+      "panel_layout": "contained 1380 (sidebar) / top bar + full-bleed panel band (top-bar)",
+      "card_border": "fischer tiles: shadow rgba(0,0,0,.1) 0 0 30px, white; ft tiles: white on panel, no shadow"
+    },
+    "renderer_components": [
+      "ProductListing (client: filter state, counts, result label)",
+      "ProductTile",
+      "ProductRail (highlights)",
+      "FacetFilter"
+    ]
+  }
+}

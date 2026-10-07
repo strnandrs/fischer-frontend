@@ -1,0 +1,142 @@
+{
+  "name": "text-block",
+  "display_name": "Text Block",
+  "kind": "nestable",
+  "intent": "text-block",
+  "description": "Headline, short text and buttons on a colored band (e.g. 'Innovationen weltweit').",
+  "preview_field": "headline",
+  "reused_by": [
+    "fischer#3",
+    "fischertechnik-pdp#4"
+  ],
+  "tabs": {
+    "Content": [
+      "headline",
+      "subheadline",
+      "body",
+      "buttons"
+    ],
+    "Style": [
+      "text_align",
+      "background",
+      "spacing_top",
+      "spacing_bottom"
+    ]
+  },
+  "fields": {
+    "headline": {
+      "type": "text",
+      "display_name": "Headline",
+      "required": true,
+      "max_length": 80,
+      "translatable": true,
+      "default": "Headline",
+      "render": {
+        "as": "h2"
+      }
+    },
+    "subheadline": {
+      "type": "text",
+      "display_name": "Subheadline",
+      "translatable": true,
+      "default": "",
+      "max_length": 120,
+      "render": {
+        "as": "p"
+      }
+    },
+    "body": {
+      "type": "richtext",
+      "translatable": true,
+      "customize_toolbar": true,
+      "toolbar": [
+        "bold",
+        "italic",
+        "olist",
+        "link",
+        "ai-complete",
+        "ai-shorten",
+        "ai-rephrase",
+        "ai-summarize",
+        "ai-extend",
+        "ai-simplify",
+        "ai-tone",
+        "ai-translate",
+        "ai-tldr",
+        "list",
+        "ai-spelling"
+      ],
+      "default": "",
+      "display_name": "Text",
+      "render": {
+        "as": "prose"
+      }
+    },
+    "buttons": {
+      "type": "bloks",
+      "display_name": "Buttons",
+      "component_whitelist": [
+        "button"
+      ],
+      "restrict_components": true,
+      "max": 2,
+      "render": {
+        "as": "children"
+      }
+    },
+    "text_align": {
+      "type": "option",
+      "display_name": "Alignment",
+      "datasource": "content-align",
+      "default": "center",
+      "render": {
+        "as": "token",
+        "map": "align"
+      }
+    },
+    "background": {
+      "type": "option",
+      "display_name": "Background",
+      "datasource": "background-colors",
+      "default": "panel",
+      "render": {
+        "as": "token",
+        "map": "bg"
+      }
+    },
+    "spacing_top": {
+      "type": "option",
+      "display_name": "Spacing Top",
+      "datasource": "spacing-scale",
+      "default": "none",
+      "required": false,
+      "description": "Background-matched vertical space top the section (replaces the source's divider spacers): md = 96px, lg = 120px.",
+      "render": {
+        "as": "token",
+        "map": "space",
+        "side": "top"
+      }
+    },
+    "spacing_bottom": {
+      "type": "option",
+      "display_name": "Spacing Bottom",
+      "datasource": "spacing-scale",
+      "default": "none",
+      "required": false,
+      "description": "Background-matched vertical space bottom the section (replaces the source's divider spacers): md = 96px, lg = 120px.",
+      "render": {
+        "as": "token",
+        "map": "space",
+        "side": "bottom"
+      }
+    }
+  },
+  "view": {
+    "name": "TextBlock",
+    "root": "section",
+    "notes": "Full-bleed band; text column 912px centered (cols 3-10). h2 42/52 600 mb 24, body 16/28 300 (fischer) / 18/28 (fischertechnik), buttons mt 24. subheadline (ft-pdp#4 overline): 21/31 600 var(--color-text), mt 24 below the headline, body follows mt 12. On white background with text_align center + a 'secondary' button (outline, large 17x36) it reproduces the ft miniMINT intro (source H1 48/58 rendered as h2 at the brand h2 size — accepted).",
+    "styling_cues": {
+      "panel_layout": "full-bleed band, centered 912px text column"
+    }
+  }
+}

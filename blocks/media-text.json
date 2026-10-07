@@ -1,0 +1,143 @@
+{
+  "name": "media-text",
+  "display_name": "Media + Text",
+  "kind": "nestable",
+  "intent": "media-text",
+  "description": "Large image on one side, headline and text on the other (e.g. 'Holz trifft auf Technik').",
+  "preview_field": "headline",
+  "reused_by": [
+    "fischertechnik-pdp#7"
+  ],
+  "tabs": {
+    "Content": [
+      "headline",
+      "body",
+      "buttons",
+      "image"
+    ],
+    "Style": [
+      "reverse",
+      "background",
+      "spacing_top",
+      "spacing_bottom"
+    ]
+  },
+  "fields": {
+    "headline": {
+      "type": "text",
+      "display_name": "Headline",
+      "translatable": true,
+      "default": "Headline",
+      "required": true,
+      "max_length": 80,
+      "render": {
+        "as": "h2"
+      }
+    },
+    "body": {
+      "type": "richtext",
+      "display_name": "Text",
+      "translatable": true,
+      "customize_toolbar": true,
+      "toolbar": [
+        "bold",
+        "italic",
+        "olist",
+        "link",
+        "ai-complete",
+        "ai-shorten",
+        "ai-rephrase",
+        "ai-summarize",
+        "ai-extend",
+        "ai-simplify",
+        "ai-tone",
+        "ai-translate",
+        "ai-tldr",
+        "list",
+        "ai-spelling"
+      ],
+      "default": "",
+      "render": {
+        "as": "prose"
+      }
+    },
+    "buttons": {
+      "type": "bloks",
+      "display_name": "Buttons",
+      "component_whitelist": [
+        "button"
+      ],
+      "restrict_components": true,
+      "max": 2,
+      "render": {
+        "as": "children"
+      }
+    },
+    "image": {
+      "type": "asset",
+      "display_name": "Image",
+      "filetypes": [
+        "images"
+      ],
+      "required": true,
+      "translatable": true,
+      "default": {},
+      "description": "Landscape ~4:3 (864x648). Set the alt text in the asset's meta (translatable).",
+      "render": {
+        "as": "image"
+      }
+    },
+    "reverse": {
+      "type": "boolean",
+      "display_name": "Image on the left",
+      "default": false,
+      "render": {
+        "as": "boolean"
+      }
+    },
+    "background": {
+      "type": "option",
+      "display_name": "Background",
+      "datasource": "background-colors",
+      "default": "white",
+      "render": {
+        "as": "token",
+        "map": "bg"
+      }
+    },
+    "spacing_top": {
+      "type": "option",
+      "display_name": "Spacing Top",
+      "datasource": "spacing-scale",
+      "default": "none",
+      "required": false,
+      "description": "Background-matched vertical space top the section (replaces the source's divider spacers): md = 96px, lg = 120px.",
+      "render": {
+        "as": "token",
+        "map": "space",
+        "side": "top"
+      }
+    },
+    "spacing_bottom": {
+      "type": "option",
+      "display_name": "Spacing Bottom",
+      "datasource": "spacing-scale",
+      "default": "none",
+      "required": false,
+      "description": "Background-matched vertical space bottom the section (replaces the source's divider spacers): md = 96px, lg = 120px.",
+      "render": {
+        "as": "token",
+        "map": "space",
+        "side": "bottom"
+      }
+    }
+  },
+  "view": {
+    "name": "MediaText",
+    "root": "section",
+    "notes": "Full-bleed 1440 row, height = image height (648 at 1440): image 864x648 cover on the right (60%), text column left 492 wide with 42px left padding, vertically centered: h2 30/40 600 var(--color-text) (source H3 size), body 18/28 300 mt 24. reverse -> image left, text right. Mobile: image on top, text below with 30px gutters.",
+    "styling_cues": {
+      "panel_layout": "full-bleed, image bleeds to the viewport edge"
+    }
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "name": "hero-slide",
+  "display_name": "Hero Slide",
+  "kind": "atom",
+  "intent": "hero",
+  "description": "One slide of the hero carousel: full-bleed photo with headline, subline and an arrow link.",
+  "preview_field": "headline",
+  "reused_by": [
+    "fischer#1",
+    "fischertechnik#1"
+  ],
+  "tabs": {
+    "Content": [
+      "headline",
+      "subheadline",
+      "link",
+      "image",
+      "image_mobile"
+    ],
+    "Style": [
+      "text_align"
+    ]
+  },
+  "fields": {
+    "headline": {
+      "type": "text",
+      "display_name": "Headline",
+      "required": true,
+      "max_length": 80,
+      "translatable": true,
+      "default": "Headline",
+      "render": {
+        "as": "p",
+        "class": "hero headline (brand type scale: fischer 36/46, fischertechnik 48/58, 600, white)"
+      }
+    },
+    "subheadline": {
+      "type": "textarea",
+      "display_name": "Subheadline",
+      "max_length": 160,
+      "translatable": true,
+      "default": "",
+      "render": {
+        "as": "p"
+      }
+    },
+    "link": {
+      "type": "multilink",
+      "display_name": "Link",
+      "translatable": true,
+      "default": {
+        "linktype": "story",
+        "id": ""
+      },
+      "description": "Renders the white arrow under the text; the arrow is the link.",
+      "render": {
+        "as": "link"
+      }
+    },
+    "image": {
+      "type": "asset",
+      "display_name": "Image (desktop)",
+      "filetypes": [
+        "images"
+      ],
+      "required": true,
+      "translatable": true,
+      "default": {},
+      "description": "1920x648 (fischer) / 1920x720 (fischertechnik) landscape. Set the alt text in the asset's meta (translatable).",
+      "render": {
+        "as": "image",
+        "fit": "cover"
+      }
+    },
+    "image_mobile": {
+      "type": "asset",
+      "display_name": "Image (mobile)",
+      "filetypes": [
+        "images"
+      ],
+      "required": false,
+      "translatable": true,
+      "default": {},
+      "description": "Optional portrait crop for small screens; falls back to the desktop image.",
+      "render": {
+        "as": "image",
+        "media": "(max-width: 767px)"
+      }
+    },
+    "text_align": {
+      "type": "option",
+      "display_name": "Text position",
+      "datasource": "content-align",
+      "default": "left",
+      "render": {
+        "as": "token",
+        "map": "align"
+      }
+    }
+  },
+  "view": {
+    "name": "HeroSlide",
+    "root": "div",
+    "notes": "Rendered inside HeroCarousel's slide track. When the brand theme has brand_box=true (fischer) the text sits in a 400x534 var(--color-primary) box at top-left that starts under the 80px header (logo sits on it), padding 30px, headline 36px; text_align is ignored in that mode. Otherwise (fischertechnik) text sits directly on the image in a 444px column with 30px padding, left (or right when text_align=right), headline 48px white.",
+    "styling_cues": {
+      "decorative_svg": "assets/svg/fischer/icon-arrow-right.svg"
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "name": "footer-column",
+  "display_name": "Footer Column",
+  "kind": "atom",
+  "intent": "navigation",
+  "description": "A headed link column in the footer.",
+  "preview_field": "headline",
+  "reused_by": [
+    "fischer#chrome",
+    "fischertechnik#chrome"
+  ],
+  "tabs": {
+    "Content": [
+      "headline",
+      "links"
+    ]
+  },
+  "fields": {
+    "headline": {
+      "type": "text",
+      "display_name": "Headline",
+      "required": true,
+      "max_length": 60,
+      "translatable": true,
+      "default": "Column",
+      "render": {
+        "as": "p",
+        "class": "18/28 600"
+      }
+    },
+    "links": {
+      "type": "bloks",
+      "display_name": "Links",
+      "component_whitelist": [
+        "nav-link"
+      ],
+      "restrict_components": true,
+      "max": 12,
+      "render": {
+        "as": "children"
+      }
+    }
+  },
+  "view": {
+    "name": "FooterColumn",
+    "root": "div",
+    "notes": "Heading 18/28 600, links 16px 300 with ~34px row pitch; collapses to an accordion (chevron) on mobile."
+  }
+}

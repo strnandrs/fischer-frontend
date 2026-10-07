@@ -1,0 +1,55 @@
+{
+  "name": "facet-filter",
+  "display_name": "Facet Filter",
+  "kind": "atom",
+  "intent": "filter",
+  "description": "One filter group in a category listing. Material, drill diameter and 'age from' filter the products live; other facets show as collapsed static headers.",
+  "preview_field": "label",
+  "reused_by": [
+    "fischer-products-category#2",
+    "fischertechnik-products-category#2"
+  ],
+  "tabs": {
+    "Content": [
+      "facet",
+      "label",
+      "open"
+    ]
+  },
+  "fields": {
+    "facet": {
+      "type": "option",
+      "display_name": "Facet",
+      "datasource": "product-facets",
+      "default": "material",
+      "render": {
+        "as": "facet-key"
+      },
+      "required": true
+    },
+    "label": {
+      "type": "text",
+      "display_name": "Label",
+      "translatable": true,
+      "default": "",
+      "required": true,
+      "max_length": 60,
+      "render": {
+        "as": "text"
+      }
+    },
+    "open": {
+      "type": "boolean",
+      "display_name": "Expanded by default",
+      "default": false,
+      "render": {
+        "as": "boolean"
+      }
+    }
+  },
+  "view": {
+    "name": "FacetFilter",
+    "root": "div",
+    "notes": "Rendered by the listing's client component (not standalone). Interactive facets (material -> product.material, drill_diameter -> product.drill_diameters, age_from -> product.age_from): options = the datasource entries, each with a live count from the folder's products; zero-count options disabled. Sidebar layout: accordion head 16/300 (chevron), checkbox rows 'label (count)' 16/300, gap 12, multi-select (OR within facet, AND across facets), first 6 options visible + 'mehr anzeigen'. Top-bar layout: label 16/600 then inline radio chips 149x44 bg var(--color-panel) (single-select, no counts). Static facets: header only, never expands (no values on source when collapsed)."
+  }
+}

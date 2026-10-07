@@ -1,0 +1,64 @@
+{
+  "name": "icon-tile",
+  "display_name": "Icon Tile",
+  "kind": "atom",
+  "intent": "card-grid",
+  "description": "Centered line icon over a short label on a light panel tile; the whole tile is a link.",
+  "preview_field": "label",
+  "reused_by": [
+    "fischer#2",
+    "fischertechnik#10"
+  ],
+  "tabs": {
+    "Content": [
+      "icon",
+      "label",
+      "link"
+    ]
+  },
+  "fields": {
+    "icon": {
+      "type": "option",
+      "display_name": "Icon",
+      "datasource": "icons",
+      "default": "globe",
+      "required": true,
+      "render": {
+        "as": "icon",
+        "note": "inline the matching saved SVG (stroke currentColor)"
+      }
+    },
+    "label": {
+      "type": "text",
+      "display_name": "Label",
+      "required": true,
+      "max_length": 40,
+      "translatable": true,
+      "default": "Label",
+      "render": {
+        "as": "p"
+      }
+    },
+    "link": {
+      "type": "multilink",
+      "display_name": "Link",
+      "translatable": true,
+      "default": {
+        "linktype": "story",
+        "id": ""
+      },
+      "render": {
+        "as": "link"
+      }
+    }
+  },
+  "view": {
+    "name": "IconTile",
+    "root": "a",
+    "notes": "Tile 366x202, bg var(--color-panel), padding 12px 42px 42px; icon box 132x132 (fischer, stroke 0.667) / ~64px glyph in 132 box (fischertechnik), margin-bottom -18px; label 24/34 600 centered, color var(--color-text). Icons map: globe/book-open/shopping-cart -> assets/svg/fischer/sec-1-teaser-icon-*.svg; phone-call/users/info -> assets/svg/fischertechnik/sec-9-*.svg; phone -> assets/svg/fischer/footer-icon-phone.svg.",
+    "styling_cues": {
+      "card_border": "borderless, radius 0",
+      "icon_treatment": "thin outline stroke icon, currentColor, ~132px box"
+    }
+  }
+}

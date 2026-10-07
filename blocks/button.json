@@ -1,0 +1,72 @@
+{
+  "name": "button",
+  "display_name": "Button",
+  "kind": "atom",
+  "intent": "button",
+  "description": "CTA atom. 'primary' renders the brand's button (site-config theme: fischer = 2px black outline, fills black on hover; fischertechnik = solid blue). 'arrow' renders a bare 24px right-arrow icon (label becomes aria-label) and, inside a banner, stretches the link over the whole banner.",
+  "preview_field": "label",
+  "reused_by": [
+    "fischer#3",
+    "fischertechnik#3",
+    "fischertechnik#4",
+    "fischertechnik#7",
+    "fischertechnik-pdp#1",
+    "fischertechnik-pdp#4",
+    "fischer-pdp#1"
+  ],
+  "tabs": {
+    "Content": [
+      "label",
+      "link"
+    ],
+    "Style": [
+      "style"
+    ]
+  },
+  "fields": {
+    "label": {
+      "type": "text",
+      "display_name": "Label",
+      "required": true,
+      "max_length": 60,
+      "translatable": true,
+      "default": "Mehr erfahren",
+      "render": {
+        "as": "text"
+      }
+    },
+    "link": {
+      "type": "multilink",
+      "display_name": "Link",
+      "required": true,
+      "translatable": true,
+      "default": {
+        "linktype": "url",
+        "url": "#"
+      },
+      "render": {
+        "as": "link"
+      }
+    },
+    "style": {
+      "type": "option",
+      "display_name": "Style",
+      "datasource": "button-styles",
+      "default": "primary",
+      "render": {
+        "as": "token",
+        "map": "button"
+      },
+      "description": "'Text link' = label with a small arrow, no box."
+    }
+  },
+  "view": {
+    "name": "Button",
+    "root": "a",
+    "notes": "primary class set comes from the active brand theme (CSS vars set from site-config.button_style): outline = transparent bg, 2px solid var(--color-text), text var(--color-text), hover bg var(--color-text) + white text (0.3s); solid = bg var(--color-primary), 2px transparent border, white text, hover darken. Both: radius 0, padding 5px 18px, font-weight 600 16px/28px, height ~42px. arrow = inline icon-arrow-right.svg (24px, currentColor), visually-hidden label. secondary = outline in var(--color-text) on every brand (2px, transparent, hover filled) — ft 'Alle miniMINT Modelle entdecken'. text-link = no box: label 18/28 600 var(--color-text) + trailing 16px arrow, pr 6, hover primary ('Zum e-Learning', 'Produktvarianten', 'Bilddaten herunterladen').",
+    "styling_cues": {
+      "button_shape": "square (radius 0)",
+      "decorative_svg": "assets/svg/fischertechnik/icon-arrow-right.svg"
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "name": "product-property",
+  "display_name": "Product Property",
+  "kind": "atom",
+  "intent": "attribute",
+  "description": "Icon + small label + value (e.g. 'Anzahl Modelle 1', 'Alter ab 8') in the PDP 'Eigenschaften' row.",
+  "preview_field": "label",
+  "reused_by": [
+    "fischertechnik-pdp#1"
+  ],
+  "tabs": {
+    "Content": [
+      "icon",
+      "label",
+      "value"
+    ]
+  },
+  "fields": {
+    "icon": {
+      "type": "option",
+      "display_name": "Icon",
+      "datasource": "icons",
+      "default": "models",
+      "render": {
+        "as": "icon"
+      },
+      "required": true
+    },
+    "label": {
+      "type": "text",
+      "display_name": "Label",
+      "translatable": true,
+      "default": "Label",
+      "required": true,
+      "max_length": 40,
+      "render": {
+        "as": "text"
+      }
+    },
+    "value": {
+      "type": "text",
+      "display_name": "Value",
+      "translatable": true,
+      "default": "",
+      "required": true,
+      "max_length": 40,
+      "render": {
+        "as": "text"
+      }
+    }
+  },
+  "view": {
+    "name": "ProductProperty",
+    "root": "div",
+    "notes": "Inline item: 44x44 outline icon (var(--color-primary) stroke) + text stack: label 14/24 600 var(--color-secondary), value 18/18 300 var(--color-text). Items in a row, ~205px pitch.",
+    "styling_cues": {
+      "icon_treatment": "44px outline icon in brand primary (ft blue)"
+    }
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "name": "banner",
+  "display_name": "Banner",
+  "kind": "nestable",
+  "intent": "cta-banner",
+  "description": "Full-bleed horizontal banner: a wide background image (colored panel/diagonal baked into the image) with headline, text and an optional CTA (button or whole-banner arrow link).",
+  "preview_field": "headline",
+  "reused_by": [
+    "fischertechnik#3",
+    "fischertechnik#4",
+    "fischertechnik#6",
+    "fischertechnik#7",
+    "fischertechnik-pdp#3",
+    "fischertechnik-pdp#6"
+  ],
+  "tabs": {
+    "Content": [
+      "headline",
+      "body",
+      "cta",
+      "image",
+      "image_mobile"
+    ],
+    "Style": [
+      "content_position",
+      "text_color",
+      "spacing_top",
+      "spacing_bottom"
+    ]
+  },
+  "fields": {
+    "headline": {
+      "type": "text",
+      "display_name": "Headline",
+      "required": false,
+      "max_length": 80,
+      "translatable": true,
+      "default": "",
+      "render": {
+        "as": "h2"
+      }
+    },
+    "body": {
+      "type": "richtext",
+      "translatable": true,
+      "customize_toolbar": true,
+      "toolbar": [
+        "bold",
+        "italic",
+        "olist",
+        "link",
+        "ai-complete",
+        "ai-shorten",
+        "ai-rephrase",
+        "ai-summarize",
+        "ai-extend",
+        "ai-simplify",
+        "ai-tone",
+        "ai-translate",
+        "ai-tldr",
+        "list",
+        "ai-spelling"
+      ],
+      "default": "",
+      "display_name": "Text",
+      "render": {
+        "as": "prose"
+      }
+    },
+    "cta": {
+      "type": "bloks",
+      "display_name": "Call to action",
+      "component_whitelist": [
+        "button"
+      ],
+      "restrict_components": true,
+      "max": 1,
+      "description": "Button style 'arrow' turns the whole banner into the link.",
+      "render": {
+        "as": "children"
+      }
+    },
+    "image": {
+      "type": "asset",
+      "display_name": "Background image",
+      "filetypes": [
+        "images"
+      ],
+      "required": true,
+      "translatable": true,
+      "default": {},
+      "description": "1920x480; the colored text panel is part of the image. Set the alt text in the asset's meta (translatable).",
+      "render": {
+        "as": "bg-image"
+      }
+    },
+    "image_mobile": {
+      "type": "asset",
+      "display_name": "Background image (mobile)",
+      "filetypes": [
+        "images"
+      ],
+      "required": false,
+      "translatable": true,
+      "default": {},
+      "render": {
+        "as": "bg-image",
+        "media": "(max-width: 767px)"
+      }
+    },
+    "content_position": {
+      "type": "option",
+      "display_name": "Text position",
+      "datasource": "content-align",
+      "default": "left",
+      "render": {
+        "as": "token",
+        "map": "align"
+      }
+    },
+    "text_color": {
+      "type": "option",
+      "display_name": "Text color",
+      "datasource": "text-colors",
+      "default": "default",
+      "description": "Pick 'inverse' (white) when the image panel behind the text is dark.",
+      "render": {
+        "as": "token",
+        "map": "text"
+      }
+    },
+    "spacing_top": {
+      "type": "option",
+      "display_name": "Spacing Top",
+      "datasource": "spacing-scale",
+      "default": "none",
+      "required": false,
+      "description": "Background-matched vertical space top the section (replaces the source's divider spacers): md = 96px, lg = 120px.",
+      "render": {
+        "as": "token",
+        "map": "space",
+        "side": "top"
+      }
+    },
+    "spacing_bottom": {
+      "type": "option",
+      "display_name": "Spacing Bottom",
+      "datasource": "spacing-scale",
+      "default": "none",
+      "required": false,
+      "description": "Background-matched vertical space bottom the section (replaces the source's divider spacers): md = 96px, lg = 120px.",
+      "render": {
+        "as": "token",
+        "map": "space",
+        "side": "bottom"
+      }
+    }
+  },
+  "view": {
+    "name": "Banner",
+    "root": "section",
+    "notes": "Height 360px at 1440 (image cover, center). Text column ~560px at 30px left inset (content_position=left) or starting at ~850px (right, fischertechnik#6 'Made in Germany'), vertically centered. h2 42/52 600, body 18/28 300, mt 24. CTA: button primary mt 24, or arrow (24px) mt 30 with a stretched link covering the banner. Fallback bg when no image: #dbe2e6-ish via var(--color-panel). Image-only banner (no headline/body/cta) renders just the 1440x360 image (ft-pdp#3). Right-positioned inverse text over a dark image (ft-pdp#6): h2 48/58 600 right-aligned, body right-aligned 18/28 300.",
+    "styling_cues": {
+      "panel_layout": "full-bleed",
+      "panel": "image-baked colored panel with diagonal edge (dark #2c292a / light #eef3f5 / red #d83d3d / blue #0169b3)"
+    }
+  }
+}

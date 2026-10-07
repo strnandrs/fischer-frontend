@@ -1,0 +1,48 @@
+{
+  "name": "social-link",
+  "display_name": "Social Link",
+  "kind": "atom",
+  "intent": "navigation",
+  "description": "Footer social icon.",
+  "preview_field": "platform",
+  "reused_by": [
+    "fischer#chrome",
+    "fischertechnik#chrome"
+  ],
+  "tabs": {
+    "Content": [
+      "platform",
+      "link"
+    ]
+  },
+  "fields": {
+    "platform": {
+      "type": "option",
+      "display_name": "Platform",
+      "datasource": "social-platforms",
+      "required": true,
+      "default": "facebook",
+      "render": {
+        "as": "icon"
+      }
+    },
+    "link": {
+      "type": "multilink",
+      "display_name": "Link",
+      "required": true,
+      "translatable": true,
+      "default": {
+        "linktype": "url",
+        "url": ""
+      },
+      "render": {
+        "as": "link"
+      }
+    }
+  },
+  "view": {
+    "name": "SocialLink",
+    "root": "a",
+    "notes": "30x30 square, bg var(--color-secondary) (#8C827A / #60676C), white 24px glyph, radius 0, 9px gap. Glyphs: source PNGs media.fischer.group/.../social/rebrush/{name}.png or equivalent inline SVG."
+  }
+}

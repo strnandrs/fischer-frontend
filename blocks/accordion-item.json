@@ -1,0 +1,79 @@
+{
+  "name": "accordion-item",
+  "display_name": "Accordion Item",
+  "kind": "atom",
+  "intent": "accordion",
+  "description": "Collapsible product-detail panel: a title with rich text and/or a label/value table.",
+  "preview_field": "headline",
+  "reused_by": [
+    "fischer-pdp#3",
+    "fischertechnik-pdp#2"
+  ],
+  "tabs": {
+    "Content": [
+      "headline",
+      "body",
+      "rows"
+    ]
+  },
+  "fields": {
+    "headline": {
+      "type": "text",
+      "display_name": "Headline",
+      "translatable": true,
+      "default": "Headline",
+      "required": true,
+      "max_length": 80,
+      "render": {
+        "as": "h3"
+      }
+    },
+    "body": {
+      "type": "richtext",
+      "display_name": "Text",
+      "translatable": true,
+      "customize_toolbar": true,
+      "toolbar": [
+        "bold",
+        "italic",
+        "olist",
+        "link",
+        "ai-complete",
+        "ai-shorten",
+        "ai-rephrase",
+        "ai-summarize",
+        "ai-extend",
+        "ai-simplify",
+        "ai-tone",
+        "ai-translate",
+        "ai-tldr",
+        "list",
+        "ai-spelling"
+      ],
+      "default": "",
+      "render": {
+        "as": "prose"
+      }
+    },
+    "rows": {
+      "type": "bloks",
+      "display_name": "Table rows",
+      "component_whitelist": [
+        "spec-row"
+      ],
+      "restrict_components": true,
+      "max": 40,
+      "render": {
+        "as": "children"
+      }
+    }
+  },
+  "view": {
+    "name": "AccordionItem",
+    "root": "div",
+    "notes": "Header ~81px: title 21/31 600 var(--color-text) inset (x147 of the 1380 container, i.e. narrow 1146 column + 24px inner padding), chevron right; 1px var(--color-panel-strong) top/bottom rules. Panel content in the 1098 inner column: body prose 18/28 300 (bold paragraphs act as sub-headings), then rows as the technical-details table. Collapsed by default.",
+    "styling_cues": {
+      "accordion_glyph": "chevron (thin, 30px)"
+    }
+  }
+}

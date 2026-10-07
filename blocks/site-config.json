@@ -1,0 +1,401 @@
+{
+  "name": "site-config",
+  "display_name": "Site Config",
+  "kind": "content_type",
+  "intent": "site-config",
+  "description": "Per-brand global: theme tokens (mapped to CSS variables), logos, multi-level main navigation, utility nav and footer. One story per brand folder: fischer/site-config, fischertechnik/site-config.",
+  "preview_field": "theme_preset",
+  "reused_by": [
+    "fischer#chrome",
+    "fischertechnik#chrome",
+    "fischer-products#breadcrumb",
+    "fischertechnik-products#breadcrumb",
+    "fischertechnik-pdp#1 (shop texts)"
+  ],
+  "tabs": {
+    "Theme": [
+      "theme_preset",
+      "logo",
+      "color_primary",
+      "color_secondary",
+      "color_text",
+      "color_panel",
+      "color_muted",
+      "color_panel_strong",
+      "font",
+      "button_style",
+      "brand_box"
+    ],
+    "Navigation": [
+      "main_nav"
+    ],
+    "Utility": [
+      "country_switch_label",
+      "country_switch_link",
+      "account_label",
+      "account_link",
+      "search_placeholder"
+    ],
+    "Footer": [
+      "footer_columns",
+      "footer_logo",
+      "social_links",
+      "legal_company",
+      "legal_links"
+    ],
+    "Shop": [
+      "cart_label",
+      "cart_toast",
+      "vat_note",
+      "shipping_info"
+    ]
+  },
+  "fields": {
+    "theme_preset": {
+      "type": "option",
+      "display_name": "Theme preset",
+      "datasource": "theme-presets",
+      "required": true,
+      "default": "fischer",
+      "description": "Base type scale and component geometry of the brand (e.g. hero height, heading sizes). The color, font and button settings below override it.",
+      "render": {
+        "as": "attr",
+        "attr": "data-brand on <body>"
+      }
+    },
+    "logo": {
+      "type": "asset",
+      "display_name": "Header logo",
+      "filetypes": [
+        "images"
+      ],
+      "required": true,
+      "translatable": false,
+      "default": {},
+      "description": "SVG preferred. With 'Brand box' on, use the white (negative) logo.",
+      "render": {
+        "as": "image"
+      }
+    },
+    "color_primary": {
+      "type": "text",
+      "display_name": "Primary color",
+      "regex": "^#[0-9A-Fa-f]{6}$",
+      "translatable": false,
+      "default": "#FF0000",
+      "description": "Hex. Brand box, eyebrows, active nav marker, active carousel dot, link hover, solid buttons.",
+      "render": {
+        "as": "css-var",
+        "var": "--color-primary"
+      }
+    },
+    "color_secondary": {
+      "type": "text",
+      "display_name": "Accent color",
+      "regex": "^#[0-9A-Fa-f]{6}$",
+      "translatable": false,
+      "default": "#8C827A",
+      "description": "Hex. Search box and social icon squares.",
+      "render": {
+        "as": "css-var",
+        "var": "--color-secondary"
+      }
+    },
+    "color_text": {
+      "type": "text",
+      "display_name": "Text color",
+      "regex": "^#[0-9A-Fa-f]{6}$",
+      "translatable": false,
+      "default": "#000000",
+      "render": {
+        "as": "css-var",
+        "var": "--color-text"
+      }
+    },
+    "color_panel": {
+      "type": "text",
+      "display_name": "Panel color",
+      "regex": "^#[0-9A-Fa-f]{6}$",
+      "translatable": false,
+      "default": "#F2F1EF",
+      "description": "Hex. Light bands, tiles and footer background ('panel' background option).",
+      "render": {
+        "as": "css-var",
+        "var": "--color-panel"
+      }
+    },
+    "color_muted": {
+      "type": "text",
+      "display_name": "Muted color",
+      "regex": "^#[0-9A-Fa-f]{6}$",
+      "translatable": false,
+      "default": "#BDBAB0",
+      "description": "Hex. Inactive carousel dots and subtle UI.",
+      "render": {
+        "as": "css-var",
+        "var": "--color-muted"
+      }
+    },
+    "color_panel_strong": {
+      "type": "text",
+      "display_name": "Line / strong panel color",
+      "regex": "^#[0-9A-Fa-f]{6}$",
+      "translatable": false,
+      "default": "#E5E3DF",
+      "description": "Hex. Breadcrumb dividers, rules, accordion borders and the 'Panel (strong)' background.",
+      "render": {
+        "as": "css-var",
+        "var": "--color-panel-strong"
+      }
+    },
+    "font": {
+      "type": "option",
+      "display_name": "Font",
+      "datasource": "fonts",
+      "default": "archivo",
+      "render": {
+        "as": "css-var",
+        "var": "--font-sans",
+        "map": "font"
+      }
+    },
+    "button_style": {
+      "type": "option",
+      "display_name": "Button style",
+      "datasource": "brand-button-styles",
+      "default": "outline",
+      "render": {
+        "as": "attr",
+        "attr": "data-button-style on <body>"
+      }
+    },
+    "brand_box": {
+      "type": "boolean",
+      "display_name": "Brand box",
+      "default": false,
+      "description": "Logo sits on a primary-colored panel that extends down into the hero; hero slide text is shown inside that panel.",
+      "render": {
+        "as": "boolean"
+      }
+    },
+    "main_nav": {
+      "type": "bloks",
+      "display_name": "Main navigation",
+      "component_whitelist": [
+        "nav-item"
+      ],
+      "restrict_components": true,
+      "max": 10,
+      "render": {
+        "as": "children"
+      }
+    },
+    "country_switch_label": {
+      "type": "text",
+      "display_name": "Country/language switch label",
+      "max_length": 60,
+      "translatable": true,
+      "default": "Länderauswahl",
+      "description": "Accessible label of the globe icon and title of its language flyout.",
+      "render": {
+        "as": "text"
+      }
+    },
+    "country_switch_link": {
+      "type": "multilink",
+      "display_name": "Country selection page",
+      "translatable": true,
+      "default": {
+        "linktype": "url",
+        "url": ""
+      },
+      "description": "Optional. If empty, the globe opens a flyout listing the space's languages (de, en, fr, es).",
+      "render": {
+        "as": "link"
+      }
+    },
+    "account_label": {
+      "type": "text",
+      "display_name": "Account label",
+      "max_length": 30,
+      "translatable": true,
+      "default": "myfischer",
+      "render": {
+        "as": "text"
+      }
+    },
+    "account_link": {
+      "type": "multilink",
+      "display_name": "Account link",
+      "translatable": true,
+      "default": {
+        "linktype": "url",
+        "url": ""
+      },
+      "render": {
+        "as": "link"
+      }
+    },
+    "search_placeholder": {
+      "type": "text",
+      "display_name": "Search placeholder",
+      "max_length": 40,
+      "translatable": true,
+      "default": "Ihr Suchbegriff",
+      "render": {
+        "as": "text"
+      }
+    },
+    "footer_columns": {
+      "type": "bloks",
+      "display_name": "Footer columns",
+      "component_whitelist": [
+        "footer-column"
+      ],
+      "restrict_components": true,
+      "max": 4,
+      "render": {
+        "as": "children"
+      }
+    },
+    "footer_logo": {
+      "type": "asset",
+      "display_name": "Footer logo",
+      "filetypes": [
+        "images"
+      ],
+      "translatable": false,
+      "default": {},
+      "render": {
+        "as": "image"
+      }
+    },
+    "social_links": {
+      "type": "bloks",
+      "display_name": "Social links",
+      "component_whitelist": [
+        "social-link"
+      ],
+      "restrict_components": true,
+      "max": 8,
+      "render": {
+        "as": "children"
+      }
+    },
+    "legal_company": {
+      "type": "text",
+      "display_name": "Legal entity",
+      "max_length": 60,
+      "translatable": true,
+      "default": "",
+      "render": {
+        "as": "text"
+      }
+    },
+    "legal_links": {
+      "type": "bloks",
+      "display_name": "Legal links",
+      "component_whitelist": [
+        "nav-link"
+      ],
+      "restrict_components": true,
+      "max": 8,
+      "render": {
+        "as": "children"
+      }
+    },
+    "cart_label": {
+      "type": "text",
+      "display_name": "Add-to-cart label",
+      "translatable": true,
+      "default": "In den Warenkorb legen",
+      "max_length": 40,
+      "render": {
+        "as": "text"
+      }
+    },
+    "cart_toast": {
+      "type": "text",
+      "display_name": "Add-to-cart message",
+      "translatable": true,
+      "default": "Demo: Der Artikel wurde in den Warenkorb gelegt.",
+      "max_length": 120,
+      "render": {
+        "as": "text"
+      },
+      "description": "Toast shown after clicking add-to-cart (demo, nothing is ordered)."
+    },
+    "vat_note": {
+      "type": "text",
+      "display_name": "Price note",
+      "translatable": true,
+      "default": "inkl. MwSt.",
+      "max_length": 40,
+      "render": {
+        "as": "text"
+      }
+    },
+    "shipping_info": {
+      "type": "richtext",
+      "display_name": "Shipping info",
+      "translatable": true,
+      "customize_toolbar": true,
+      "toolbar": [
+        "bold",
+        "italic",
+        "olist",
+        "link",
+        "ai-complete",
+        "ai-shorten",
+        "ai-rephrase",
+        "ai-summarize",
+        "ai-extend",
+        "ai-simplify",
+        "ai-tone",
+        "ai-translate",
+        "ai-tldr",
+        "list",
+        "ai-spelling"
+      ],
+      "default": "",
+      "render": {
+        "as": "prose"
+      }
+    }
+  },
+  "view": {
+    "name": "SiteConfig",
+    "root": "div",
+    "notes": "Not rendered as a page. Layout reads it for the brand of the current folder: sets CSS vars (--color-primary/-secondary/-text/-panel/-muted, --font-sans) + data-brand (theme_preset) + data-button-style on <body>, renders Header (fixed 80px white bar: logo left [brand_box: logo on 400px primary panel], main_nav centered-right 16px 300 with 24px gaps, globe icon, account icon+14px label, search block 208-220x80 bg var(--color-secondary) with white placeholder, 2px white underline and white search icon) and Footer (panel band: 4 columns at 96/414/732/1050 within 1248px, footer logo under column 1, socials under column 4; white 84px legal bar centered 14px: legal_company · link · link …). Phone/user/globe/search glyphs from assets/svg/{brand}/. NEW: --color-panel-strong from color_panel_strong. Shop tab is read by the product page (shop head) and product tiles (VAT note); only shown when a product has a price (fischer leaves it empty). Layout also renders the BREADCRUMB row (see model-synthesis-products.md) under the 80px header on every non-start page of a brand.",
+    "styling_cues": {
+      "header": "sticky fixed white 80px bar, no shadow; flyouts full-width white with shadow 0 10px 30px rgba(0,0,0,.06)",
+      "footer_bg": "var(--color-panel) link band + white legal bar"
+    },
+    "theme_values": {
+      "fischer": {
+        "theme_preset": "fischer",
+        "color_primary": "#FF0000",
+        "color_secondary": "#8C827A",
+        "color_text": "#000000",
+        "color_panel": "#F2F1EF",
+        "color_muted": "#BDBAB0",
+        "font": "archivo",
+        "button_style": "outline",
+        "brand_box": true,
+        "color_panel_strong": "#E5E3DF"
+      },
+      "fischertechnik": {
+        "theme_preset": "fischertechnik",
+        "color_primary": "#0069B4",
+        "color_secondary": "#60676C",
+        "color_text": "#242627",
+        "color_panel": "#EEF3F5",
+        "color_muted": "#96A2A8",
+        "font": "montserrat",
+        "button_style": "solid",
+        "brand_box": false,
+        "color_panel_strong": "#DBE2E6"
+      }
+    }
+  }
+}

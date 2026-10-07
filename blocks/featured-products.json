@@ -1,0 +1,145 @@
+{
+  "name": "featured-products",
+  "display_name": "Featured Products",
+  "kind": "nestable",
+  "intent": "product-teasers",
+  "description": "Headline + hand-picked products shown as product tiles (live product data). Usable on any page.",
+  "preview_field": "headline",
+  "reused_by": [
+    "fischertechnik-pdp#8 (same ProductRail component, via product.related_products)",
+    "any start page (new placement)"
+  ],
+  "tabs": {
+    "Content": [
+      "headline",
+      "products",
+      "cta"
+    ],
+    "Style": [
+      "background",
+      "spacing_top",
+      "spacing_bottom"
+    ]
+  },
+  "fields": {
+    "headline": {
+      "type": "text",
+      "display_name": "Headline",
+      "translatable": true,
+      "default": "Unsere Produkt-Highlights",
+      "max_length": 100,
+      "render": {
+        "as": "h2"
+      }
+    },
+    "products": {
+      "type": "custom",
+      "field_type": "ext-picker-content",
+      "display_name": "Products",
+      "translatable": false,
+      "options": [
+        {
+          "name": "accessToken",
+          "value": "aD36neRXOoF2cUn8amTCxwtt"
+        },
+        {
+          "name": "version",
+          "value": "draft"
+        },
+        {
+          "name": "startsWith",
+          "value": ""
+        }
+      ],
+      "description": "Pick product stories of this brand. Their current name, image and price are shown.",
+      "render": {
+        "as": "product-refs",
+        "component": "ProductRail"
+      },
+      "picker_contract": {
+        "plugin": "ext-picker-content (org field plugin; stored value shape UNKNOWN)",
+        "startsWith_note": "Field options are per component schema, NOT per brand. The shared schema can't hold 'fischer/produkte' AND 'fischertechnik/produkte'. Default = empty (all stories; renderer keeps only component 'product'). If the plugin supports a path placeholder (e.g. '{0}/produkte' = first segment of the current story), set that instead. Open question #1.",
+        "normalize": "normalizeProductRefs(value): value may be an array, or an object with items|stories|value|selected array. Each entry may be a string (uuid = 36-char UUID; numeric = id; else full_slug/slug) or an object carrying uuid | id | full_slug | slug (also nested under .story or .content). Output: ordered, de-duplicated list of {uuid?|id?|full_slug?}. Unknown shapes -> [] + console.warn with the raw value (dev only).",
+        "fetch": "uuids -> cdn/stories?by_uuids_ordered=...; full_slugs -> cdn/stories?by_slugs=...; ids -> cdn/stories/{id} (parallel). Always pass language = current locale and the same version as the page (draft in preview). Keep only story.content.component === 'product'; keep editor order.",
+        "render": "ProductTile per product (shared renderer component, NOT an editor block); variant per brand theme preset.",
+        "fallback": {
+          "type": "options",
+          "source": "internal_stories",
+          "filter_content_type": [
+            "product"
+          ],
+          "folder_slug": "{0}/produkte/",
+          "note": "Native Storyblok multi-story reference (stores uuids, editor order). '{0}' = first path segment of the edited story = brand folder, so the native fallback IS brand-scoped. Same normalize/fetch path (uuids)."
+        }
+      }
+    },
+    "cta": {
+      "type": "bloks",
+      "display_name": "Call to action",
+      "component_whitelist": [
+        "button"
+      ],
+      "restrict_components": true,
+      "max": 1,
+      "render": {
+        "as": "children"
+      }
+    },
+    "background": {
+      "type": "option",
+      "display_name": "Background",
+      "datasource": "background-colors",
+      "default": "panel-strong",
+      "render": {
+        "as": "token",
+        "map": "bg"
+      }
+    },
+    "spacing_top": {
+      "type": "option",
+      "display_name": "Spacing Top",
+      "datasource": "spacing-scale",
+      "default": "none",
+      "required": false,
+      "description": "Background-matched vertical space top the section (replaces the source's divider spacers): md = 96px, lg = 120px.",
+      "render": {
+        "as": "token",
+        "map": "space",
+        "side": "top"
+      }
+    },
+    "spacing_bottom": {
+      "type": "option",
+      "display_name": "Spacing Bottom",
+      "datasource": "spacing-scale",
+      "default": "none",
+      "required": false,
+      "description": "Background-matched vertical space bottom the section (replaces the source's divider spacers): md = 96px, lg = 120px.",
+      "render": {
+        "as": "token",
+        "map": "space",
+        "side": "bottom"
+      }
+    }
+  },
+  "view": {
+    "name": "FeaturedProducts",
+    "root": "section",
+    "notes": "Server component: normalizeProductRefs(products) -> fetch stories (see picker_contract) -> <ProductRail>. Layout from ft#8: band bg, content in the narrow 1146 column (x147): header row = h2 21/31 600 left + arrow pair right (44x44 white squares, disabled = muted arrow); 72px gap; track of ProductTiles 268.5x386 at 293 pitch, 4 visible. <= 4 products -> static row, no arrows. Optional CTA (button) centered below, mt 48. Band padding 72 top / 96 bottom (source) inside spacing tokens.",
+    "styling_cues": {
+      "panel_layout": "full-bleed band, narrow 1146 content",
+      "card_border": "borderless white tiles, no shadow"
+    },
+    "interaction": {
+      "type": "carousel",
+      "items_field": "products",
+      "controls": {
+        "arrows": true,
+        "dots": false
+      },
+      "autoplay": false,
+      "video_src": null,
+      "evidence": "fischertechnik-pdp#8: Splide product-teasers carousel, 13 slides, 4 visible, arrow controls top-right, no dots, no autoplay. items_field is a picker (custom) field resolved to product stories, not bloks."
+    }
+  }
+}

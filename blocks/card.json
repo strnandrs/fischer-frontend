@@ -1,0 +1,95 @@
+{
+  "name": "card",
+  "display_name": "Card",
+  "kind": "atom",
+  "intent": "card-grid",
+  "description": "Teaser tile. The parent Card Grid's card style decides the look (product teaser with button, image link with arrow, info tile, image with label chip, category tile, square image teaser).",
+  "preview_field": "headline",
+  "reused_by": [
+    "fischer#4",
+    "fischer#5",
+    "fischertechnik#2",
+    "fischertechnik#5",
+    "fischertechnik#9",
+    "fischer-products-overview#2",
+    "fischertechnik-products-overview#2",
+    "fischertechnik-pdp#5"
+  ],
+  "tabs": {
+    "Content": [
+      "image",
+      "headline",
+      "text",
+      "link",
+      "link_label"
+    ]
+  },
+  "fields": {
+    "image": {
+      "type": "asset",
+      "display_name": "Image",
+      "filetypes": [
+        "images"
+      ],
+      "required": false,
+      "translatable": true,
+      "default": {},
+      "description": "Set the alt text in the asset's meta (translatable).",
+      "render": {
+        "as": "image"
+      }
+    },
+    "headline": {
+      "type": "text",
+      "display_name": "Headline",
+      "required": true,
+      "max_length": 80,
+      "translatable": true,
+      "default": "Headline",
+      "render": {
+        "as": "h3"
+      }
+    },
+    "text": {
+      "type": "textarea",
+      "display_name": "Text",
+      "translatable": true,
+      "default": "",
+      "render": {
+        "as": "p"
+      }
+    },
+    "link": {
+      "type": "multilink",
+      "display_name": "Link",
+      "translatable": true,
+      "default": {
+        "linktype": "story",
+        "id": ""
+      },
+      "render": {
+        "as": "link"
+      }
+    },
+    "link_label": {
+      "type": "text",
+      "display_name": "Button label",
+      "max_length": 40,
+      "translatable": true,
+      "default": "",
+      "description": "Only shown by the 'Product teaser' card style (outlined button); other styles show an arrow and make the whole tile the link.",
+      "render": {
+        "as": "text"
+      }
+    }
+  },
+  "view": {
+    "name": "Card",
+    "root": "article",
+    "notes": "Reads card_style from the parent grid (context/prop). product-teaser: image 444x291 cover, body padding 30px, h3 24/34 600, text 18/28 300 mt18, button (brand primary) mt30 with link_label, tile bg = white when the grid background is 'panel' else transparent, hover shadow rgba(0,0,0,.1) 0 0 30px. image-link: image (cut-out on colored block, 327x163 contained), h3 21/31 600 at 30px inset, 24px arrow below, whole tile = link, no bg. info: tile bg var(--color-panel), image (circle icon) centered top ~150px, padding 30px, title 18/28 600, text 18/28 300, no link. label-chip: full image 444x250 cover, white chip overlapping bottom-left (padding 30px) with headline 18 600 + inline arrow, whole tile = link; text unused. category-tile: white tile 210x328, flex column centered, padding 72 18 18, gap 24; image 110x110 contain (empty image -> nothing, label stays at the same offset); headline 21/31 600 centered var(--color-text); whole tile = link; text/link_label unused. image-square: image 444x444 cover, no bg, then headline h3 24/34 600 and text 18/28 300 with 30px left inset; link optional (whole tile when set), no button.",
+    "styling_cues": {
+      "card_border": "borderless, radius 0",
+      "decorative_svg": "assets/svg/fischertechnik/icon-arrow-right.svg"
+    }
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "name": "card-grid",
+  "display_name": "Card Grid",
+  "kind": "nestable",
+  "intent": "card-grid",
+  "description": "Optional eyebrow + headline above a row/grid of cards or icon tiles. Card style picks the tile look.",
+  "preview_field": "headline",
+  "reused_by": [
+    "fischer#2",
+    "fischer#4",
+    "fischer#5",
+    "fischertechnik#2",
+    "fischertechnik#5",
+    "fischertechnik#8",
+    "fischertechnik#9",
+    "fischertechnik#10",
+    "fischer-products-overview#2",
+    "fischertechnik-products-overview#2",
+    "fischertechnik-pdp#5"
+  ],
+  "tabs": {
+    "Content": [
+      "eyebrow",
+      "headline",
+      "cards"
+    ],
+    "Style": [
+      "card_style",
+      "columns",
+      "background",
+      "spacing_top",
+      "spacing_bottom"
+    ]
+  },
+  "fields": {
+    "eyebrow": {
+      "type": "text",
+      "display_name": "Eyebrow",
+      "max_length": 60,
+      "translatable": true,
+      "default": "",
+      "render": {
+        "as": "p",
+        "class": "24/34 600 color var(--color-primary)"
+      }
+    },
+    "headline": {
+      "type": "text",
+      "display_name": "Headline",
+      "max_length": 80,
+      "translatable": true,
+      "default": "",
+      "render": {
+        "as": "h2"
+      }
+    },
+    "cards": {
+      "type": "bloks",
+      "display_name": "Cards",
+      "component_whitelist": [
+        "card",
+        "icon-tile"
+      ],
+      "restrict_components": true,
+      "min": 1,
+      "max": 24,
+      "render": {
+        "as": "children"
+      }
+    },
+    "card_style": {
+      "type": "option",
+      "display_name": "Card style",
+      "datasource": "card-styles",
+      "default": "product-teaser",
+      "description": "Look of the Card items (icon tiles always keep their own look).",
+      "render": {
+        "as": "variant",
+        "passes_to": "card"
+      }
+    },
+    "columns": {
+      "type": "option",
+      "display_name": "Columns",
+      "datasource": "layout-columns",
+      "default": "3",
+      "render": {
+        "as": "token",
+        "map": "gridCols"
+      }
+    },
+    "background": {
+      "type": "option",
+      "display_name": "Background",
+      "datasource": "background-colors",
+      "default": "white",
+      "render": {
+        "as": "token",
+        "map": "bg"
+      }
+    },
+    "spacing_top": {
+      "type": "option",
+      "display_name": "Spacing Top",
+      "datasource": "spacing-scale",
+      "default": "none",
+      "required": false,
+      "description": "Background-matched vertical space top the section (replaces the source's divider spacers): md = 96px, lg = 120px.",
+      "render": {
+        "as": "token",
+        "map": "space",
+        "side": "top"
+      }
+    },
+    "spacing_bottom": {
+      "type": "option",
+      "display_name": "Spacing Bottom",
+      "datasource": "spacing-scale",
+      "default": "none",
+      "required": false,
+      "description": "Background-matched vertical space bottom the section (replaces the source's divider spacers): md = 96px, lg = 120px.",
+      "render": {
+        "as": "token",
+        "map": "space",
+        "side": "bottom"
+      }
+    }
+  },
+  "view": {
+    "name": "CardGrid",
+    "root": "section",
+    "notes": "Contained 1380px (max 1920 container, 30px side padding), 24px gutters. Header row: eyebrow (mb 12) + h2 (fischer 48/58 600, max ~444px wide so it wraps to 2 lines; fischertechnik 42/52 600) then 72px gap to the cards. Icon-tile rows: 3 tiles 366px centered in 390px slots (not stretched). columns=4 -> 4-up (fischertechnik#2). Mobile: icon-tile rows become a horizontal swipe row (CSS scroll-snap; source carousel-fi is destroyed on desktop = static), other cards stack. category-tile (products overview): fixed 210px tiles, 5 per row (columns 5), gap 24, grid 1146 wide — fischer aligned to column 1 of the 1380 container, fischertechnik centered (theme preset); band padding 96/96 = spacing md/md on background panel. image-square (ft PDP teaser group): 3x 444 tiles, gap 24, no band padding.",
+    "styling_cues": {
+      "panel_layout": "full-bleed band, contained content (1380)",
+      "card_border": "borderless, radius 0; product-teaser hover shadow rgba(0,0,0,.1) 0 0 30px"
+    },
+    "responsive_notes": "Source flags fischer#2 and fischertechnik#10 as carousel-fi--destroyed (static at desktop, slider only on mobile). Built static; mobile scroll-snap swipe is a CSS-only enhancement — no view.interaction."
+  }
+}

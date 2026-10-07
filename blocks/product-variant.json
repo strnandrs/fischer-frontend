@@ -1,0 +1,79 @@
+{
+  "name": "product-variant",
+  "display_name": "Product Variant",
+  "kind": "atom",
+  "intent": "variant-row",
+  "description": "One orderable variant of a product family: name, article number, optional image and its attributes.",
+  "preview_field": "name",
+  "reused_by": [
+    "fischer-pdp#2",
+    "fischer-pdp#1"
+  ],
+  "tabs": {
+    "Content": [
+      "name",
+      "article_number",
+      "image",
+      "specs"
+    ]
+  },
+  "fields": {
+    "name": {
+      "type": "text",
+      "display_name": "Name",
+      "translatable": true,
+      "default": "Variant",
+      "required": true,
+      "max_length": 80,
+      "render": {
+        "as": "text"
+      }
+    },
+    "article_number": {
+      "type": "text",
+      "display_name": "Article number",
+      "max_length": 20,
+      "translatable": false,
+      "default": "",
+      "render": {
+        "as": "text",
+        "prefix_i18n": "art_nr"
+      }
+    },
+    "image": {
+      "type": "asset",
+      "display_name": "Image",
+      "filetypes": [
+        "images"
+      ],
+      "translatable": true,
+      "default": {},
+      "render": {
+        "as": "image",
+        "size": "90x90"
+      }
+    },
+    "specs": {
+      "type": "bloks",
+      "display_name": "Attributes",
+      "component_whitelist": [
+        "spec-row"
+      ],
+      "restrict_components": true,
+      "max": 40,
+      "description": "The first four rows become the table columns (use the same labels in the same order on every variant). All rows appear in the expandable 'Merkmale' panel.",
+      "render": {
+        "as": "children"
+      }
+    }
+  },
+  "view": {
+    "name": "ProductVariant",
+    "root": "div",
+    "notes": "Accordion row 1380 wide (header ~102-120px), bg var(--color-panel): image 90x90 at x42 (optional), name 18/600 var(--color-primary) + trailing arrow glyph (not a link — no variant pages), 'Art.-Nr. {n}' 16/300 var(--color-secondary); then 4 attribute cells (values of specs[0..3]) 16/300 with chevron right; expanding shows every spec-row as label/value pairs ('Merkmale'). Rows stacked 24px apart.",
+    "styling_cues": {
+      "accordion_glyph": "chevron",
+      "card_border": "borderless, panel bg"
+    }
+  }
+}

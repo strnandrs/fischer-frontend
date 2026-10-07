@@ -1,0 +1,78 @@
+{
+  "name": "nav-link",
+  "display_name": "Nav Link",
+  "kind": "atom",
+  "intent": "navigation",
+  "description": "A single link used in the main-nav flyouts, footer columns, legal bar and category subcategory lists. Optional thumbnail or icon.",
+  "preview_field": "label",
+  "reused_by": [
+    "fischer#chrome",
+    "fischertechnik#chrome",
+    "fischer-products-category#2 (sidebar)",
+    "fischertechnik-products-category#2 (chips)"
+  ],
+  "tabs": {
+    "Content": [
+      "label",
+      "link",
+      "image",
+      "icon"
+    ]
+  },
+  "fields": {
+    "label": {
+      "type": "text",
+      "display_name": "Label",
+      "required": true,
+      "max_length": 80,
+      "translatable": true,
+      "default": "Link",
+      "render": {
+        "as": "text"
+      }
+    },
+    "link": {
+      "type": "multilink",
+      "display_name": "Link",
+      "required": true,
+      "translatable": true,
+      "default": {
+        "linktype": "story",
+        "id": ""
+      },
+      "render": {
+        "as": "link"
+      }
+    },
+    "image": {
+      "type": "asset",
+      "display_name": "Thumbnail",
+      "filetypes": [
+        "images"
+      ],
+      "required": false,
+      "translatable": true,
+      "default": {},
+      "description": "Optional thumbnail: 60x60 in nav flyouts (makes the flyout a thumbnail grid); in a category's subcategory list it turns the links into image chips.",
+      "render": {
+        "as": "image",
+        "size": "60x60"
+      }
+    },
+    "icon": {
+      "type": "option",
+      "display_name": "Icon",
+      "datasource": "icons",
+      "required": false,
+      "default": "",
+      "render": {
+        "as": "icon"
+      }
+    }
+  },
+  "view": {
+    "name": "NavLink",
+    "root": "a",
+    "notes": "16px 300; hover color var(--color-primary) (fischer red / fischertechnik blue). With icon: 24px icon left, 24px gap (footer phone line). Context 'category-nav' (product-category.subcategories): without images = fischer sidebar list (14/24 600, p 12, bottom border var(--color-panel-strong), chevron right); with images = ft chip (257 wide, image 257x145 cover, label 16/600 p 24 on var(--color-panel), radio-circle glyph right as on source)."
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "name": "page",
+  "display_name": "Page",
+  "kind": "content_type",
+  "intent": "page",
+  "description": "A brand page (e.g. the start page of fischer/ or fischertechnik/). Header/footer come from the brand folder's site-config.",
+  "preview_field": "title",
+  "reused_by": [
+    "fischer#page",
+    "fischertechnik#page",
+    "fischer-products-overview#1",
+    "fischertechnik-products-overview#1"
+  ],
+  "tabs": {
+    "Content": [
+      "headline",
+      "body"
+    ],
+    "SEO": [
+      "title",
+      "description",
+      "og_image"
+    ]
+  },
+  "fields": {
+    "headline": {
+      "type": "text",
+      "display_name": "Page headline",
+      "translatable": true,
+      "default": "",
+      "max_length": 80,
+      "render": {
+        "as": "h1"
+      },
+      "description": "Optional H1 above the sections (e.g. 'Produkte'). Leave empty on start pages."
+    },
+    "body": {
+      "type": "bloks",
+      "display_name": "Sections",
+      "component_whitelist": [
+        "hero-carousel",
+        "card-grid",
+        "banner",
+        "text-block",
+        "media-text",
+        "featured-products"
+      ],
+      "restrict_components": true,
+      "render": {
+        "as": "children"
+      }
+    },
+    "title": {
+      "type": "text",
+      "display_name": "SEO title",
+      "max_length": 70,
+      "translatable": true,
+      "default": "",
+      "render": {
+        "as": "meta"
+      }
+    },
+    "description": {
+      "type": "textarea",
+      "display_name": "SEO description",
+      "max_length": 160,
+      "translatable": true,
+      "default": "",
+      "render": {
+        "as": "meta"
+      }
+    },
+    "og_image": {
+      "type": "asset",
+      "display_name": "Social image",
+      "filetypes": [
+        "images"
+      ],
+      "translatable": true,
+      "default": {},
+      "render": {
+        "as": "meta"
+      }
+    }
+  },
+  "view": {
+    "name": "Page",
+    "root": "div",
+    "notes": "Renders body inside the Layout's single <main>. Layout resolves the site-config of the story's root folder (fischer/ or fischertechnik/) and applies its theme as CSS variables on <body data-brand>. If headline is set: H1 row in the 12-col container (48/58 600 var(--color-text)), directly below the breadcrumb, 120px to the first section (= first section's spacing_top lg)."
+  }
+}

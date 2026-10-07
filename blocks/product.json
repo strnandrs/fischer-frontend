@@ -1,0 +1,398 @@
+{
+  "name": "product",
+  "display_name": "Product",
+  "kind": "content_type",
+  "intent": "product-detail",
+  "description": "One product (family) — shared by both brands. The story is its own detail page; listings, highlights and related rows read it live. Leave parts empty that a brand doesn't use.",
+  "preview_field": "name",
+  "reused_by": [
+    "fischer-pdp#1",
+    "fischer-pdp#2",
+    "fischer-pdp#3",
+    "fischertechnik-pdp#1",
+    "fischertechnik-pdp#2",
+    "fischertechnik-pdp#8",
+    "fischer-products-category#2 (tiles)",
+    "fischertechnik-products-category#2 (tiles)"
+  ],
+  "tabs": {
+    "Product": [
+      "name",
+      "eyebrow",
+      "tagline",
+      "article_number",
+      "gallery",
+      "intro",
+      "links"
+    ],
+    "Highlights": [
+      "features",
+      "properties"
+    ],
+    "Price": [
+      "price"
+    ],
+    "Filters": [
+      "material",
+      "drill_diameters",
+      "age_from"
+    ],
+    "Variants": [
+      "variants",
+      "variant_count"
+    ],
+    "Details": [
+      "details",
+      "body"
+    ],
+    "Related": [
+      "related_headline",
+      "related_products"
+    ],
+    "SEO": [
+      "title",
+      "description",
+      "og_image"
+    ]
+  },
+  "fields": {
+    "name": {
+      "type": "text",
+      "display_name": "Name",
+      "translatable": true,
+      "default": "Produktname",
+      "required": true,
+      "max_length": 80,
+      "render": {
+        "as": "h1"
+      }
+    },
+    "eyebrow": {
+      "type": "text",
+      "display_name": "Eyebrow",
+      "translatable": true,
+      "default": "",
+      "max_length": 40,
+      "render": {
+        "as": "p"
+      },
+      "description": "Family or series label above the name on product tiles (e.g. 'Bolzenanker')."
+    },
+    "tagline": {
+      "type": "text",
+      "display_name": "Tagline",
+      "translatable": true,
+      "default": "",
+      "max_length": 160,
+      "render": {
+        "as": "p"
+      }
+    },
+    "article_number": {
+      "type": "text",
+      "display_name": "Article number",
+      "max_length": 20,
+      "translatable": false,
+      "default": "",
+      "render": {
+        "as": "text",
+        "prefix_i18n": "art_nr"
+      }
+    },
+    "gallery": {
+      "type": "multiasset",
+      "display_name": "Gallery",
+      "filetypes": [
+        "images"
+      ],
+      "required": true,
+      "translatable": true,
+      "default": [],
+      "description": "First image = product tile image. Set alt texts in the asset meta (translatable).",
+      "render": {
+        "as": "gallery"
+      }
+    },
+    "intro": {
+      "type": "richtext",
+      "display_name": "Intro",
+      "translatable": true,
+      "customize_toolbar": true,
+      "toolbar": [
+        "bold",
+        "italic",
+        "olist",
+        "link",
+        "ai-complete",
+        "ai-shorten",
+        "ai-rephrase",
+        "ai-summarize",
+        "ai-extend",
+        "ai-simplify",
+        "ai-tone",
+        "ai-translate",
+        "ai-tldr",
+        "list",
+        "ai-spelling"
+      ],
+      "default": "",
+      "render": {
+        "as": "prose"
+      }
+    },
+    "links": {
+      "type": "bloks",
+      "display_name": "Links",
+      "component_whitelist": [
+        "button"
+      ],
+      "restrict_components": true,
+      "max": 3,
+      "description": "Use button style 'Text link' (e.g. 'Zum e-Learning'). A link to '#varianten' scrolls to the variants list.",
+      "render": {
+        "as": "children"
+      }
+    },
+    "features": {
+      "type": "richtext",
+      "display_name": "Top features",
+      "translatable": true,
+      "customize_toolbar": true,
+      "toolbar": [
+        "bold",
+        "italic",
+        "olist",
+        "link",
+        "ai-complete",
+        "ai-shorten",
+        "ai-rephrase",
+        "ai-summarize",
+        "ai-extend",
+        "ai-simplify",
+        "ai-tone",
+        "ai-translate",
+        "ai-tldr",
+        "list",
+        "ai-spelling"
+      ],
+      "default": "",
+      "render": {
+        "as": "prose"
+      },
+      "description": "Bullet list. fischer: bullets on the product tile. fischertechnik: 'Top Features' on the product page."
+    },
+    "properties": {
+      "type": "bloks",
+      "display_name": "Properties",
+      "component_whitelist": [
+        "product-property"
+      ],
+      "restrict_components": true,
+      "max": 6,
+      "render": {
+        "as": "children"
+      }
+    },
+    "price": {
+      "type": "number",
+      "display_name": "Price (EUR)",
+      "decimals": 2,
+      "steps": 0.01,
+      "min_value": 0,
+      "default": "",
+      "description": "Gross price. When set, price, VAT note, add-to-cart and shipping info (site config) are shown.",
+      "render": {
+        "as": "price",
+        "format": "Intl.NumberFormat(locale, {style:'currency', currency:'EUR'})"
+      }
+    },
+    "material": {
+      "type": "option",
+      "display_name": "Material",
+      "datasource": "product-materials",
+      "default": "",
+      "render": {
+        "as": "facet-value",
+        "facet": "material"
+      },
+      "required": false
+    },
+    "drill_diameters": {
+      "type": "multioption",
+      "display_name": "Drill diameters",
+      "datasource": "drill-diameters",
+      "default": [],
+      "render": {
+        "as": "facet-value",
+        "facet": "drill_diameter"
+      }
+    },
+    "age_from": {
+      "type": "option",
+      "display_name": "Age from",
+      "datasource": "age-from",
+      "default": "",
+      "render": {
+        "as": "facet-value",
+        "facet": "age_from"
+      },
+      "required": false
+    },
+    "variants": {
+      "type": "bloks",
+      "display_name": "Variants",
+      "component_whitelist": [
+        "product-variant"
+      ],
+      "restrict_components": true,
+      "max": 60,
+      "render": {
+        "as": "children",
+        "section": "variants"
+      }
+    },
+    "variant_count": {
+      "type": "number",
+      "display_name": "Variant count",
+      "min_value": 0,
+      "default": "",
+      "description": "Shown as 'N Varianten' on tiles and in the variants button. Empty = number of variants above.",
+      "render": {
+        "as": "number"
+      }
+    },
+    "details": {
+      "type": "bloks",
+      "display_name": "Detail sections",
+      "component_whitelist": [
+        "accordion-item"
+      ],
+      "restrict_components": true,
+      "max": 8,
+      "render": {
+        "as": "children",
+        "interaction": "accordion"
+      }
+    },
+    "body": {
+      "type": "bloks",
+      "display_name": "Content sections",
+      "component_whitelist": [
+        "banner",
+        "text-block",
+        "card-grid",
+        "media-text"
+      ],
+      "restrict_components": true,
+      "render": {
+        "as": "children"
+      }
+    },
+    "related_headline": {
+      "type": "text",
+      "display_name": "Related headline",
+      "translatable": true,
+      "default": "",
+      "max_length": 100,
+      "render": {
+        "as": "h2"
+      }
+    },
+    "related_products": {
+      "type": "custom",
+      "field_type": "ext-picker-content",
+      "display_name": "Related products",
+      "translatable": false,
+      "options": [
+        {
+          "name": "accessToken",
+          "value": "aD36neRXOoF2cUn8amTCxwtt"
+        },
+        {
+          "name": "version",
+          "value": "draft"
+        },
+        {
+          "name": "startsWith",
+          "value": ""
+        }
+      ],
+      "description": "Shown as a product carousel at the end of the page.",
+      "render": {
+        "as": "product-refs",
+        "component": "ProductRail"
+      },
+      "picker_contract": {
+        "plugin": "ext-picker-content (org field plugin; stored value shape UNKNOWN)",
+        "startsWith_note": "Field options are per component schema, NOT per brand. The shared schema can't hold 'fischer/produkte' AND 'fischertechnik/produkte'. Default = empty (all stories; renderer keeps only component 'product'). If the plugin supports a path placeholder (e.g. '{0}/produkte' = first segment of the current story), set that instead. Open question #1.",
+        "normalize": "normalizeProductRefs(value): value may be an array, or an object with items|stories|value|selected array. Each entry may be a string (uuid = 36-char UUID; numeric = id; else full_slug/slug) or an object carrying uuid | id | full_slug | slug (also nested under .story or .content). Output: ordered, de-duplicated list of {uuid?|id?|full_slug?}. Unknown shapes -> [] + console.warn with the raw value (dev only).",
+        "fetch": "uuids -> cdn/stories?by_uuids_ordered=...; full_slugs -> cdn/stories?by_slugs=...; ids -> cdn/stories/{id} (parallel). Always pass language = current locale and the same version as the page (draft in preview). Keep only story.content.component === 'product'; keep editor order.",
+        "render": "ProductTile per product (shared renderer component, NOT an editor block); variant per brand theme preset.",
+        "fallback": {
+          "type": "options",
+          "source": "internal_stories",
+          "filter_content_type": [
+            "product"
+          ],
+          "folder_slug": "{0}/produkte/",
+          "note": "Native Storyblok multi-story reference (stores uuids, editor order). '{0}' = first path segment of the edited story = brand folder, so the native fallback IS brand-scoped. Same normalize/fetch path (uuids)."
+        }
+      }
+    },
+    "title": {
+      "type": "text",
+      "display_name": "SEO title",
+      "max_length": 70,
+      "translatable": true,
+      "default": "",
+      "description": "Defaults to the product/category name when empty.",
+      "render": {
+        "as": "meta"
+      }
+    },
+    "description": {
+      "type": "textarea",
+      "display_name": "SEO description",
+      "max_length": 160,
+      "translatable": true,
+      "default": "",
+      "render": {
+        "as": "meta"
+      }
+    },
+    "og_image": {
+      "type": "asset",
+      "display_name": "Social image",
+      "filetypes": [
+        "images"
+      ],
+      "translatable": true,
+      "default": {},
+      "description": "Defaults to the first gallery image when empty.",
+      "render": {
+        "as": "meta"
+      }
+    }
+  },
+  "view": {
+    "name": "Product",
+    "root": "div",
+    "notes": "Page order: Head -> Variants (if variants) -> Details accordion (if details) -> body sections -> Related (if related_products; ProductRail on bg var(--color-panel-strong), padding 72/96). HEAD layout follows the brand theme preset (data-brand), parts render only when filled. 'family' head (fischer#1): left col 678 = tagline 21/31 600 var(--color-primary) -> H1 name 42/52 600 -> links row (text links + arrow, 1px var(--color-panel-strong) rule below, pb 24) -> gallery (fade slider 678x381 white, arrows 44x44 overlay, 'Zoom' label, thumb strip 210x118 3-up) -> intro prose 18/28 300; right col 630 at x756 on var(--color-panel), padding 24: 'Verfügbare Optionen' 21/31 600 + per variant column label (16/22 600) a wrap of white value chips 112x48 (14/24 600) = distinct values of specs[0..3] across variants (first 10, 'mehr anzeigen' toggle) + solid primary CTA 'Varianten anzeigen ({variant_count})' 18/600 p 17x36 -> scrolls to #varianten. 'shop' head (fischertechnik#1): left col gallery (slider 2+ images, 'Größere Ansicht', arrows, thumbs 178x100, dots 12px primary/muted); right col x732: 'Art.-Nr. {n}' 18/28 600 var(--color-secondary) -> tagline 21/31 600 var(--color-primary) -> H1 name 42/52 600 -> links (text-link) -> rule -> label chip 'Top Features' (16/26 300 white on var(--color-secondary), p 0 6) + features list 16/26 300 (square bullets) -> label chip 'Eigenschaften' (white on var(--color-primary)) + properties row -> price 24/34 600 var(--color-primary) + VAT note 14/24 300 (site-config.vat_note) -> solid primary large button (site-config.cart_label, 301x60) -> click shows demo toast (site-config.cart_toast, 3s, no cart) -> shipping_info list 16/22 300 var(--color-secondary) with small square icons, 40px pitch. VARIANTS section (fischer#2, id 'varianten'): h2 'Produktvarianten' (i18n) 21/31 600; count line '{n} Produktvarianten' 14/300 + column headers = labels of variants[0].specs[0..3] (14/300 var(--color-secondary), pl 114); product-variant rows. Source select filters / 'Alle Filter anzeigen' / Zulassungen toggle / 'Mehr Ergebnisse' pagination = static UI (filters rendered as non-functional select bars from the column labels; all rows shown). Microcopy ('Top Features', 'Eigenschaften', 'Art.-Nr.', 'Verfügbare Optionen', 'Varianten anzeigen', 'Produktvarianten', 'N Varianten', 'Jahr(e)', 'Alter ab') in the code i18n dictionary (de/en/fr/es).",
+    "styling_cues": {
+      "button_shape": "square; PDP CTAs always solid primary (also on fischer, whose global button is outline)",
+      "accordion_glyph": "chevron"
+    },
+    "interaction_notes": "Gallery = carousel (arrows + thumbs; ft also dots) built client-side from the multiasset — product-level component behavior (no view.interaction: the gallery is a multiasset, not bloks). Details = accordion (collapsed by default). Variant rows = accordion. Related = ProductRail carousel (see featured-products).",
+    "content_constants": {
+      "currency": "EUR"
+    },
+    "renderer_components": [
+      "ProductHead (family | shop)",
+      "ProductGallery (client)",
+      "AddToCartButton (client, demo toast)",
+      "ProductVariants",
+      "ProductRail",
+      "ProductTile"
+    ]
+  }
+}

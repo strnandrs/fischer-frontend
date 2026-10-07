@@ -1,0 +1,50 @@
+{
+  "name": "nav-group",
+  "display_name": "Nav Group",
+  "kind": "atom",
+  "intent": "navigation",
+  "description": "Level 2 of the main navigation: a labelled column of links inside a flyout (e.g. Service > Planungshilfen).",
+  "preview_field": "headline",
+  "reused_by": [
+    "fischer#chrome",
+    "fischertechnik#chrome"
+  ],
+  "tabs": {
+    "Content": [
+      "headline",
+      "links"
+    ]
+  },
+  "fields": {
+    "headline": {
+      "type": "text",
+      "display_name": "Group label",
+      "required": false,
+      "max_length": 60,
+      "translatable": true,
+      "default": "",
+      "render": {
+        "as": "p",
+        "class": "semibold"
+      }
+    },
+    "links": {
+      "type": "bloks",
+      "display_name": "Links",
+      "component_whitelist": [
+        "nav-link"
+      ],
+      "restrict_components": true,
+      "min": 1,
+      "max": 20,
+      "render": {
+        "as": "children"
+      }
+    }
+  },
+  "view": {
+    "name": "NavGroup",
+    "root": "div",
+    "notes": "Group label 600 weight above a vertical link list; groups flow in columns inside the flyout."
+  }
+}

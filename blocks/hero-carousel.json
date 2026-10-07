@@ -1,0 +1,52 @@
+{
+  "name": "hero-carousel",
+  "display_name": "Hero Carousel",
+  "kind": "nestable",
+  "intent": "hero",
+  "description": "Full-bleed autoplaying photo carousel at the top of a page (prev/next arrows + dots).",
+  "preview_field": "slides",
+  "reused_by": [
+    "fischer#1",
+    "fischertechnik#1"
+  ],
+  "tabs": {
+    "Content": [
+      "slides"
+    ]
+  },
+  "fields": {
+    "slides": {
+      "type": "bloks",
+      "display_name": "Slides",
+      "component_whitelist": [
+        "hero-slide"
+      ],
+      "restrict_components": true,
+      "min": 1,
+      "max": 10,
+      "render": {
+        "as": "children"
+      }
+    }
+  },
+  "view": {
+    "name": "HeroCarousel",
+    "root": "section",
+    "notes": "Starts under the fixed 80px header. Slide height 648px (fischer) / 540px (fischertechnik) via theme preset var --hero-h; below it a ~60px strip with centered dots (12px round, gap 12, inactive var(--color-muted), active var(--color-primary)). Arrows: 44x44 white squares pair, bottom-right overlapping the image bottom edge (right ~122px), black arrow icon, hover icon primary + shadow 0 0 20px rgba(0,0,0,.1). With brand_box theme (fischer) each slide's text box is the red panel at top-left.",
+    "styling_cues": {
+      "panel_layout": "full-bleed",
+      "decorative_svg": "assets/svg/fischer/icon-arrow-right.svg"
+    },
+    "interaction": {
+      "type": "carousel",
+      "items_field": "slides",
+      "controls": {
+        "arrows": true,
+        "dots": true
+      },
+      "autoplay": true,
+      "video_src": null,
+      "evidence": "fischer#1: Splide, 5 rendered slides, arrows + 5 dots, autoplay; fischertechnik#1: Splide loop, 4 slides, arrows + 4 dots, autoplay (frames 0/1 show different slides)"
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "name": "spec-row",
+  "display_name": "Spec Row",
+  "kind": "atom",
+  "intent": "data-row",
+  "description": "One label/value pair: a technical-data row, a variant attribute.",
+  "preview_field": "label",
+  "reused_by": [
+    "fischer-pdp#2",
+    "fischertechnik-pdp#2"
+  ],
+  "tabs": {
+    "Content": [
+      "label",
+      "value"
+    ]
+  },
+  "fields": {
+    "label": {
+      "type": "text",
+      "display_name": "Label",
+      "translatable": true,
+      "default": "Label",
+      "required": true,
+      "max_length": 80,
+      "render": {
+        "as": "text"
+      }
+    },
+    "value": {
+      "type": "text",
+      "display_name": "Value",
+      "translatable": true,
+      "default": "",
+      "required": true,
+      "max_length": 120,
+      "render": {
+        "as": "text"
+      }
+    }
+  },
+  "view": {
+    "name": "SpecRow",
+    "root": "div",
+    "notes": "Context-rendered by the parent: in an accordion item = 2-col row (label left, value right-aligned; ft 16/22 300 var(--color-secondary), row pitch 42px, 1px var(--color-panel-strong) divider); in a product-variant = a table cell (first 4 rows) or a 'Merkmale' detail pair (all rows)."
+  }
+}
