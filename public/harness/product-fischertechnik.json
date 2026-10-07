@@ -1,0 +1,426 @@
+{
+ "component": "product",
+ "_uid": "f84fc47b-9477-4c50-8988-84b8f3ea3935",
+ "_brand": "fischertechnik",
+ "name": "miniMINT BreezeBuddy",
+ "eyebrow": "miniMINT",
+ "tagline": "Dreh an der Technik! Der Ventilator bringt Luft in Bewegung und macht Strom sichtbar und spürbar.",
+ "article_number": "579973",
+ "gallery": [
+  {
+   "filename": "https://a.storyblok.com/f/295705770532685/4509717669/ft-pdp-gallery-1.jpg",
+   "alt": "miniMINT BreezeBuddy"
+  },
+  {
+   "filename": "https://a.storyblok.com/f/295705770532685/a3c730eeaa/ft-pdp-gallery-2.jpg",
+   "alt": "miniMINT BreezeBuddy"
+  }
+ ],
+ "intro": "",
+ "links": [
+  {
+   "_uid": "42f221fb-bc80-40f4-b7a1-52ec30c9279c",
+   "component": "button",
+   "label": "Zum e-Learning",
+   "style": "text-link",
+   "link": {
+    "linktype": "url",
+    "url": "https://app.easemble.com/l/SEIN9PgF",
+    "cached_url": "https://app.easemble.com/l/SEIN9PgF",
+    "target": "_blank"
+   }
+  }
+ ],
+ "features": {
+  "type": "doc",
+  "content": [
+   {
+    "type": "bullet_list",
+    "content": [
+     {
+      "type": "list_item",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "type": "text",
+          "text": "Funktionierender Ventilator mit einem Elektromotor, der Luft in Bewegung versetzt"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "list_item",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "type": "text",
+          "text": "Einfacher Einstieg in die Grundlagen von Mechanik und Elektrotechnik ab 8 Jahren"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "list_item",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "type": "text",
+          "text": "Robuste und passgenaue Bauteile aus FSC-zertifiziertem Holz"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "list_item",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "type": "text",
+          "text": "Unterstützt die Entwicklung von Feinmotorik, logischem Denken und technischem Verständnis"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "list_item",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "type": "text",
+          "text": "Einfach digital bauen – Mit der digitalen Bauanleitung im E-Learning gelingt der Aufbau Schritt für Schritt"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "properties": [
+  {
+   "_uid": "8dc3a223-54e7-4439-b980-f4e05e4f4963",
+   "component": "product-property",
+   "icon": "models",
+   "label": "Anzahl Modelle",
+   "value": "1"
+  },
+  {
+   "_uid": "f25bd08d-02aa-4c1f-8c99-40625bb8abf1",
+   "component": "product-property",
+   "icon": "age",
+   "label": "Alter ab",
+   "value": "8"
+  }
+ ],
+ "price": 9.99,
+ "material": "",
+ "drill_diameters": [],
+ "age_from": "8",
+ "variants": [],
+ "variant_count": "",
+ "details": [
+  {
+   "_uid": "9937ebb7-681d-4f5c-86c9-1b99a0a1927b",
+   "component": "accordion-item",
+   "headline": "Produktbeschreibung",
+   "body": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "text": "Mit dem miniMINT BreezeBuddy bauen Kinder ihren eigenen funktionierenden Ventilator und erleben dabei spielerisch die Grundlagen von Mechanik und Elektrotechnik. Die passgenauen Holzteile lassen sich einfach montieren und machen Technik Schritt für Schritt verständlich."
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "text": "Sobald sich die Rotorblätter drehen, wird sichtbar, wie ein Elektromotor Bewegung erzeugt und Luft in Bewegung versetzt. So entdecken Kinder anschaulich, wie elektrische Energie in mechanische Bewegung umgewandelt wird – ein Prinzip, das in vielen Alltagsgeräten steckt."
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "text": "Der BreezeBuddy fördert technisches Verständnis, Feinmotorik und logisches Denken und eignet sich ideal als erster Einstieg in die Welt der Technik. Das hochwertige FSC-zertifizierte Holz sorgt dabei für Bauspaß mit echtem Lernwert."
+       }
+      ]
+     }
+    ]
+   },
+   "rows": []
+  },
+  {
+   "_uid": "b8a8c34a-025c-43b0-8357-b91356fad510",
+   "component": "accordion-item",
+   "headline": "Technische Daten",
+   "body": "",
+   "rows": [
+    {
+     "_uid": "8d86ef1a-24ad-44fc-b0fb-47463078266c",
+     "component": "spec-row",
+     "label": "Alter ab",
+     "value": "8 Jahr(e)"
+    },
+    {
+     "_uid": "f5a7df40-9660-4245-bc95-a8599fcbc8d8",
+     "component": "spec-row",
+     "label": "Anzahl Modelle",
+     "value": "1 Stück"
+    },
+    {
+     "_uid": "288af05d-aa3c-4738-8d7c-313b8a198174",
+     "component": "spec-row",
+     "label": "Menge",
+     "value": "1 Stück"
+    },
+    {
+     "_uid": "053caa35-505b-4ce2-b6ea-0e4d8805daba",
+     "component": "spec-row",
+     "label": "GTIN (EAN-Code)",
+     "value": "4048962581768"
+    },
+    {
+     "_uid": "80fa7124-5fef-485c-ba9b-c31342c57741",
+     "component": "spec-row",
+     "label": "ShopifyID",
+     "value": "15409157079363"
+    }
+   ]
+  }
+ ],
+ "body": [],
+ "related_headline": "Entdecke die ganze miniMINT Welt und finde dein Lieblingsmodell",
+ "related_products": [],
+ "_related": [
+  {
+   "uuid": "1ebe17e3-7010-4c8b-b410-a86f7e87cc19",
+   "full_slug": "fischertechnik/produkte/spielzeug/579973-minimint-breezebuddy",
+   "content": {
+    "component": "product",
+    "name": "miniMINT BreezeBuddy",
+    "article_number": "579973",
+    "price": 9.99,
+    "age_from": "8",
+    "gallery": [
+     {
+      "filename": "https://a.storyblok.com/f/295705770532685/702022cb89/ft-pdp-related-579973-breezebuddy.jpg",
+      "alt": "miniMINT BreezeBuddy"
+     }
+    ]
+   }
+  },
+  {
+   "uuid": "d44e0988-80ef-435d-9849-8595bd9b0c59",
+   "full_slug": "fischertechnik/produkte/spielzeug/579974-minimint-lunarover",
+   "content": {
+    "component": "product",
+    "name": "miniMINT LunaRover",
+    "article_number": "579974",
+    "price": 9.99,
+    "age_from": "8",
+    "gallery": [
+     {
+      "filename": "https://a.storyblok.com/f/295705770532685/142f33ebe2/ft-pdp-related-579974-lunarover.jpg",
+      "alt": "miniMINT LunaRover"
+     }
+    ]
+   }
+  },
+  {
+   "uuid": "18ad87e8-66ba-427d-bf0f-64f26805e03c",
+   "full_slug": "fischertechnik/produkte/spielzeug/579972-minimint-suncharger",
+   "content": {
+    "component": "product",
+    "name": "miniMINT SunCharger",
+    "article_number": "579972",
+    "price": 9.99,
+    "age_from": "8",
+    "gallery": [
+     {
+      "filename": "https://a.storyblok.com/f/295705770532685/5d881e2da5/ft-pdp-related-579972-suncharger.jpg",
+      "alt": "miniMINT SunCharger"
+     }
+    ]
+   }
+  },
+  {
+   "uuid": "16eed166-7253-4f70-b28d-ca9f13dc338e",
+   "full_slug": "fischertechnik/produkte/spielzeug/579981-minimint-skytwin",
+   "content": {
+    "component": "product",
+    "name": "miniMINT SkyTwin",
+    "article_number": "579981",
+    "price": 9.99,
+    "age_from": "8",
+    "gallery": [
+     {
+      "filename": "https://a.storyblok.com/f/295705770532685/7dd1db6c3e/ft-pdp-related-579981-skytwin.jpg",
+      "alt": "miniMINT SkyTwin"
+     }
+    ]
+   }
+  },
+  {
+   "uuid": "a04eca4d-eaa4-41fd-acf7-a2558a7374f7",
+   "full_slug": "fischertechnik/produkte/spielzeug/579984-minimint-gyrodrive",
+   "content": {
+    "component": "product",
+    "name": "miniMINT GyroDrive",
+    "article_number": "579984",
+    "price": 9.99,
+    "age_from": "8",
+    "gallery": [
+     {
+      "filename": "https://a.storyblok.com/f/295705770532685/d4d1554c0f/ft-pdp-related-579984-gyrodrive.jpg",
+      "alt": "miniMINT GyroDrive"
+     }
+    ]
+   }
+  },
+  {
+   "uuid": "a7593bbb-746e-4017-aa26-6297814d0e51",
+   "full_slug": "fischertechnik/produkte/spielzeug/579982-minimint-glowtouch",
+   "content": {
+    "component": "product",
+    "name": "miniMINT GlowTouch",
+    "article_number": "579982",
+    "price": 9.99,
+    "age_from": "8",
+    "gallery": [
+     {
+      "filename": "https://a.storyblok.com/f/295705770532685/0fdd08a796/ft-pdp-related-579982-glowtouch.jpg",
+      "alt": "miniMINT GlowTouch"
+     }
+    ]
+   }
+  },
+  {
+   "uuid": "32203a19-ab22-4d13-9fc0-992fb5448a8e",
+   "full_slug": "fischertechnik/produkte/spielzeug/579983-minimint-heliocopter",
+   "content": {
+    "component": "product",
+    "name": "miniMINT Heliocopter",
+    "article_number": "579983",
+    "price": 9.99,
+    "age_from": "8",
+    "gallery": [
+     {
+      "filename": "https://a.storyblok.com/f/295705770532685/2cc5bcccf2/ft-pdp-related-579983-heliocopter.jpg",
+      "alt": "miniMINT Heliocopter"
+     }
+    ]
+   }
+  },
+  {
+   "uuid": "a010107e-93de-4201-888f-492b5fc393d4",
+   "full_slug": "fischertechnik/produkte/spielzeug/579978-minimint-mechadino",
+   "content": {
+    "component": "product",
+    "name": "miniMINT MechaDino",
+    "article_number": "579978",
+    "price": 9.99,
+    "age_from": "8",
+    "gallery": [
+     {
+      "filename": "https://a.storyblok.com/f/295705770532685/ecfb6e88a6/ft-pdp-related-579978-mechadino.jpg",
+      "alt": "miniMINT MechaDino"
+     }
+    ]
+   }
+  },
+  {
+   "uuid": "35e50661-6f50-450e-bdf8-d7b4c5ad6399",
+   "full_slug": "fischertechnik/produkte/spielzeug/579975-minimint-greedybot",
+   "content": {
+    "component": "product",
+    "name": "miniMINT GreedyBot",
+    "article_number": "579975",
+    "price": 9.99,
+    "age_from": "8",
+    "gallery": [
+     {
+      "filename": "https://a.storyblok.com/f/295705770532685/e9db7c5d52/ft-pdp-related-579975-greedybot.jpg",
+      "alt": "miniMINT GreedyBot"
+     }
+    ]
+   }
+  },
+  {
+   "uuid": "b65387d0-2e57-43d0-bfc7-06e911018981",
+   "full_slug": "fischertechnik/produkte/spielzeug/579979-minimint-orbitlab",
+   "content": {
+    "component": "product",
+    "name": "miniMINT OrbitLab",
+    "article_number": "579979",
+    "price": 9.99,
+    "age_from": "8",
+    "gallery": [
+     {
+      "filename": "https://a.storyblok.com/f/295705770532685/571d1dbfc1/ft-pdp-related-579979-orbitlab.jpg",
+      "alt": "miniMINT OrbitLab"
+     }
+    ]
+   }
+  },
+  {
+   "uuid": "b41c25a5-f7f5-4c34-be39-7d41adb3dc0e",
+   "full_slug": "fischertechnik/produkte/spielzeug/579986-minimint-lightweaver",
+   "content": {
+    "component": "product",
+    "name": "miniMINT LightWeaver",
+    "article_number": "579986",
+    "price": 9.99,
+    "age_from": "8",
+    "gallery": [
+     {
+      "filename": "https://a.storyblok.com/f/295705770532685/b7aaa53be3/ft-pdp-related-579986-lightweaver.jpg",
+      "alt": "miniMINT LightWeaver"
+     }
+    ]
+   }
+  },
+  {
+   "uuid": "cf56e18d-7573-45a1-90d1-812d2d1b45fc",
+   "full_slug": "fischertechnik/produkte/spielzeug/579987-minimint-novaglow",
+   "content": {
+    "component": "product",
+    "name": "miniMINT NovaGlow",
+    "article_number": "579987",
+    "price": 9.99,
+    "age_from": "8",
+    "gallery": [
+     {
+      "filename": "https://a.storyblok.com/f/295705770532685/7a88d65921/ft-pdp-related-579987-novaglow.jpg",
+      "alt": "miniMINT NovaGlow"
+     }
+    ]
+   }
+  }
+ ],
+ "title": "",
+ "description": "",
+ "og_image": {}
+}

@@ -1,0 +1,11 @@
+{
+  "component": "hero-carousel",
+  "_uid": "hc-fixture-1",
+  "slides": [
+    {"component": "hero-slide", "_uid": "hs-2", "headline": "TherMax II", "subheadline": "Die sichere Abstandsmontage von schweren Lasten im Wärmedämmverbundsystem.", "link": {"linktype": "url", "url": "https://www.fischer.at/de-at/produkte/innovationen/thermax-ii", "cached_url": "https://www.fischer.at/de-at/produkte/innovationen/thermax-ii"}, "image": {"filename": "https://a.storyblok.com/f/295705770532685/dab0fd524d/hero-2-thermax2-desktop-2.jpg", "alt": "fischer TherMax II"}, "image_mobile": {}, "text_align": "left"},
+    {"component": "hero-slide", "_uid": "hs-3", "headline": "HybridPower", "subheadline": "Kunststoff trifft Stahl. Stark und vielseitig.", "link": {"linktype": "url", "url": "https://www.fischer.at/de-at/produkte/innovationen/hybridpower"}, "image": {"filename": "https://a.storyblok.com/f/295705770532685/7ef08234e1/hero-3-hybridpowereta-desktop.jpg", "alt": "HybridPower"}, "image_mobile": {}, "text_align": "left"},
+    {"component": "hero-slide", "_uid": "hs-4", "headline": "Setzgeräte für Direktbefestigungen", "subheadline": "", "link": {"linktype": "url", "url": "https://www.fischer.at/"}, "image": {"filename": "https://a.storyblok.com/f/295705770532685/f722a21c9f/hero-4-header-schussgeraete-desktop.jpg", "alt": "Setzgeräte"}, "image_mobile": {}, "text_align": "left"},
+    {"component": "hero-slide", "_uid": "hs-5", "headline": "UltraCut FBS II 6", "subheadline": "Die leistungsstarke Betonschraube.", "link": {"linktype": "url", "url": "https://www.fischer.at/"}, "image": {"filename": "https://a.storyblok.com/f/295705770532685/faae7fed39/hero-5-fbs-ii-6-r_1940x648-desktop.png", "alt": "UltraCut FBS II 6"}, "image_mobile": {}, "text_align": "left"},
+    {"component": "hero-slide", "_uid": "hs-1", "headline": "Kundenzufriedenheitsumfrage", "subheadline": "Ihre Meinung ist uns wichtig!", "link": {"linktype": "url", "url": "https://netigate.se/ra/s.aspx?s=1295175X531616686X71548"}, "image": {"filename": "https://a.storyblok.com/f/295705770532685/f52248bf15/hero-1-umfrage2026-desktop.jpg", "alt": "Kundenzufriedenheitsumfrage"}, "image_mobile": {}, "text_align": "left"}
+  ]
+}

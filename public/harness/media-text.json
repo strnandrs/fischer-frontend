@@ -1,0 +1,12 @@
+{
+ "component": "media-text",
+ "_uid": "mt-1",
+ "_brand": "fischertechnik",
+ "headline": "Holz trifft auf Technik",
+ "body": {"type":"doc","content":[
+  {"type":"paragraph","content":[{"type":"text","text":"Die miniMINT Modelle verbinden präzise gefertigte Holzteile mit spannenden technischen Funktionen."}]},
+  {"type":"paragraph","content":[{"type":"text","text":"Das verwendete Holz ist "},{"type":"text","marks":[{"type":"bold"}],"text":"FSC®-zertifiziert"},{"type":"text","text":". So entstehen Modelle, die Kinder selbst zusammenbauen, individuell bemalen und anschließend spielerisch entdecken können."}]}]},
+ "buttons": [],
+ "image": {"filename":"https://media.fischer.group/v7/_media-prod_/fischertechnik/rebrush/spielzeug/minimint/minimint-spielszenen-1152x648.jpg?iar=0&w=864&h=648&org_if_sml=0&func=crop","alt":"minimint spielszenen"},
+ "reverse": false, "background": "white", "spacing_top": "none", "spacing_bottom": "none"
+}

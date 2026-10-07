@@ -1,0 +1,11 @@
+{
+  "component": "text-block",
+  "_uid": "text-block-h1",
+  "headline": "Innovationen weltweit: fischer",
+  "body": {"type":"doc","content":[{"type":"paragraph","content":[{"type":"text","text":"Bei Befestigungssystemen aus Kunststoff, Metall oder bei chemischen Befestigungen vertrauen Handwerker und Profis weltweit auf die innovativen Produkte, Systeme und Dienstleistungen."}]}]},
+  "buttons": [{"component":"button","_uid":"tb-b1","label":"Zu den Innovationen","style":"primary","link":{"linktype":"url","url":"https://www.fischer.at/de-at/produkte/innovationen","cached_url":"https://www.fischer.at/de-at/produkte/innovationen","fieldtype":"multilink"}}],
+  "text_align": "center",
+  "background": "panel",
+  "spacing_top": "lg",
+  "spacing_bottom": "lg"
+}

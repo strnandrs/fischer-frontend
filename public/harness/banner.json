@@ -1,0 +1,43 @@
+{
+ "component": "banner",
+ "_uid": "banner-v3",
+ "image_mobile": {},
+ "spacing_top": "none",
+ "spacing_bottom": "none",
+ "_brand": "fischertechnik",
+ "headline": "Unser Ansatz für den Umgang mit KI",
+ "body": {
+  "type": "doc",
+  "content": [
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "type": "text",
+      "text": "Entdecke, wie fischertechnik künstliche Intelligenz verständlich und erlebbar macht"
+     }
+    ]
+   }
+  ]
+ },
+ "cta": [
+  {
+   "component": "button",
+   "_uid": "b1",
+   "label": "Unser Ansatz für den Umgang mit KI",
+   "style": "arrow",
+   "link": {
+    "linktype": "url",
+    "url": "https://www.fischertechnik.de/de-de/künstliche-intelligenz",
+    "cached_url": "https://www.fischertechnik.de/de-de/künstliche-intelligenz",
+    "fieldtype": "multilink"
+   }
+  }
+ ],
+ "image": {
+  "filename": "https://a.storyblok.com/f/295705770532685/c01c20d5a9/ft-banner-ki-1920x480.png",
+  "alt": ""
+ },
+ "content_position": "left",
+ "text_color": "inverse"
+}

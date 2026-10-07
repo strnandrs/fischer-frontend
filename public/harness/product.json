@@ -1,0 +1,1361 @@
+{
+ "component": "product",
+ "_uid": "6c631288-ccd4-4a2c-ae4b-689396c3e0a9",
+ "_brand": "fischer",
+ "name": "FAZ II Plus gvz",
+ "eyebrow": "Bolzenanker",
+ "tagline": "Für höchste Ansprüche. Kraftvoll und flexibel.",
+ "article_number": "",
+ "gallery": [
+  {
+   "filename": "https://a.storyblok.com/f/295705770532685/9bc4e40a22/fi-pdp-gallery-1-product.jpg",
+   "alt": "FAZ II Plus gvz"
+  },
+  {
+   "filename": "https://a.storyblok.com/f/295705770532685/17c609b66f/fi-pdp-gallery-2-balkongelaender.jpg",
+   "alt": "FAZ II Plus gvz"
+  },
+  {
+   "filename": "https://a.storyblok.com/f/295705770532685/e5a4212fb9/fi-pdp-gallery-3-stahlanbauteil.jpg",
+   "alt": "FAZ II Plus gvz"
+  },
+  {
+   "filename": "https://a.storyblok.com/f/295705770532685/f5c5520102/fi-pdp-gallery-4-foerderanlage.jpg",
+   "alt": "FAZ II Plus gvz"
+  }
+ ],
+ "intro": {
+  "type": "doc",
+  "content": [
+   {
+    "type": "paragraph",
+    "content": [
+     {
+      "type": "text",
+      "text": "Der fischer Bolzenanker FAZ II Plus ist der Stahlanker für höchste Ansprüche mit hohen Quertragfähigkeiten und breitem Anwendungsfeld. Mit dem Stahlanker werden schwere Lasten in gerissenem Beton befestigt. Der FAZ II Plus kann durch Wegfall der Bohrlochreinigung einfacher und schneller gesetzt werden (M8-M24). Der bewährte Spreizclip leitet die Lasten sicher in den Beton ein und ermöglicht eine sofort belastbare, hohe Tragfähigkeit. Ideal ist der Stahlanker beispielsweise für die Verankerung von Geländern, Kabeltrassen und Konsolen."
+     }
+    ]
+   }
+  ]
+ },
+ "links": [
+  {
+   "_uid": "dcba02c9-8f4f-4ee6-bc11-df7a45a02d17",
+   "component": "button",
+   "label": "Produktvarianten",
+   "style": "text-link",
+   "link": {
+    "linktype": "url",
+    "url": "#varianten",
+    "cached_url": "#varianten"
+   }
+  },
+  {
+   "_uid": "1d85700e-0512-4d71-8bfc-941ce0a1d616",
+   "component": "button",
+   "label": "Bilddaten herunterladen",
+   "style": "text-link",
+   "link": {
+    "linktype": "url",
+    "url": "https://www.fischer.at",
+    "cached_url": "https://www.fischer.at"
+   }
+  }
+ ],
+ "features": {
+  "type": "doc",
+  "content": [
+   {
+    "type": "bullet_list",
+    "content": [
+     {
+      "type": "list_item",
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "type": "text",
+          "text": "Galvanisch verzinkter Stahl"
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "properties": [],
+ "price": "",
+ "material": "galvanized",
+ "drill_diameters": [
+  "6",
+  "8",
+  "10",
+  "12",
+  "16",
+  "20",
+  "24"
+ ],
+ "age_from": "",
+ "variants": [
+  {
+   "_uid": "22eded4d-ec1a-48d8-99bc-7aa36f1166c9",
+   "component": "product-variant",
+   "name": "FAZ II Plus 6/10 gvz",
+   "article_number": "564572",
+   "image": {
+    "filename": "https://a.storyblok.com/f/295705770532685/a0cd88db40/fi-pdp-variant-thumb-product.jpg",
+    "alt": ""
+   },
+   "specs": [
+    {
+     "_uid": "f45a8572-a74d-4c8b-8fe0-1d668f7f94b3",
+     "component": "spec-row",
+     "label": "Bohrernenndurchmesser",
+     "value": "6 mm"
+    },
+    {
+     "_uid": "bc200893-10b8-44ad-b8ff-49ccf056665d",
+     "component": "spec-row",
+     "label": "Max. Nutzlänge hef,stand/hef,min.",
+     "value": "10 / - mm"
+    },
+    {
+     "_uid": "da63875e-39b3-4f6a-8748-1275cdc1d9fc",
+     "component": "spec-row",
+     "label": "Ankerlänge",
+     "value": "65 mm"
+    },
+    {
+     "_uid": "1c601fa3-76fc-42a0-83d1-07333f8da009",
+     "component": "spec-row",
+     "label": "Gewinde",
+     "value": "M6"
+    },
+    {
+     "_uid": "0b06ec9e-dbcd-45c6-8cad-4c94e497b3f5",
+     "component": "spec-row",
+     "label": "Material",
+     "value": "Galvanisch verzinkter Stahl"
+    },
+    {
+     "_uid": "69189698-b6c1-417e-a284-15bfebcc7196",
+     "component": "spec-row",
+     "label": "Menge",
+     "value": "50 Stück"
+    },
+    {
+     "_uid": "3670ae6d-fbb8-4977-91e4-fd49b52c5c19",
+     "component": "spec-row",
+     "label": "Profi / DIY",
+     "value": "Profi"
+    },
+    {
+     "_uid": "12403f76-8d92-4d96-ba42-3492d8e5e023",
+     "component": "spec-row",
+     "label": "GTIN (EAN-Code)",
+     "value": "4048962461978"
+    }
+   ]
+  },
+  {
+   "_uid": "958a2ada-1930-4b29-9035-d059e2204dc5",
+   "component": "product-variant",
+   "name": "FAZ II Plus 6/20 gvz",
+   "article_number": "564573",
+   "image": {
+    "filename": "https://a.storyblok.com/f/295705770532685/a0cd88db40/fi-pdp-variant-thumb-product.jpg",
+    "alt": ""
+   },
+   "specs": [
+    {
+     "_uid": "60731fc5-24c1-4945-8e3c-d6dbf177079d",
+     "component": "spec-row",
+     "label": "Bohrernenndurchmesser",
+     "value": "6 mm"
+    },
+    {
+     "_uid": "957e02a7-f397-442c-8ede-1255fcb75939",
+     "component": "spec-row",
+     "label": "Max. Nutzlänge hef,stand/hef,min.",
+     "value": "20 / - mm"
+    },
+    {
+     "_uid": "dd451733-69cf-4718-9b8c-21711681c43f",
+     "component": "spec-row",
+     "label": "Ankerlänge",
+     "value": "75 mm"
+    },
+    {
+     "_uid": "f4970586-51ab-4dbe-8414-ecf98a1aa6df",
+     "component": "spec-row",
+     "label": "Gewinde",
+     "value": "M6"
+    },
+    {
+     "_uid": "e8008015-e0fa-4f2d-bf4e-8fcc5f2644c0",
+     "component": "spec-row",
+     "label": "Material",
+     "value": "Galvanisch verzinkter Stahl"
+    },
+    {
+     "_uid": "219368f1-4c59-451c-a2b8-a0097b5a7ff3",
+     "component": "spec-row",
+     "label": "Menge",
+     "value": "50 Stück"
+    },
+    {
+     "_uid": "fc6b99e8-176e-41e2-9e70-0ad476fed752",
+     "component": "spec-row",
+     "label": "Profi / DIY",
+     "value": "Profi"
+    },
+    {
+     "_uid": "15087c5b-956a-4e11-ae50-7e0b880a13c4",
+     "component": "spec-row",
+     "label": "GTIN (EAN-Code)",
+     "value": "4048962461985"
+    }
+   ]
+  },
+  {
+   "_uid": "37be8b9c-4eb0-4ca4-84ea-faee8562e786",
+   "component": "product-variant",
+   "name": "FAZ II Plus 8/50 gvz",
+   "article_number": "564576",
+   "image": {
+    "filename": "https://a.storyblok.com/f/295705770532685/a0cd88db40/fi-pdp-variant-thumb-product.jpg",
+    "alt": ""
+   },
+   "specs": [
+    {
+     "_uid": "278a6679-b3c8-433d-b206-eeffbfb848f5",
+     "component": "spec-row",
+     "label": "Bohrernenndurchmesser",
+     "value": "8 mm"
+    },
+    {
+     "_uid": "c1ea14e4-6fd3-4d72-bdd9-72a50fce6171",
+     "component": "spec-row",
+     "label": "Max. Nutzlänge hef,stand/hef,min.",
+     "value": "50 / 60 mm"
+    },
+    {
+     "_uid": "0960cfd4-4490-4c22-aec0-270494a121cc",
+     "component": "spec-row",
+     "label": "Ankerlänge",
+     "value": "115 mm"
+    },
+    {
+     "_uid": "6da2a2e7-8bf7-4022-8e51-17b54881ca0f",
+     "component": "spec-row",
+     "label": "Gewinde",
+     "value": "M8"
+    },
+    {
+     "_uid": "9ed4a9e8-2ed8-4843-8d95-6a1d9d8ad519",
+     "component": "spec-row",
+     "label": "Material",
+     "value": "Galvanisch verzinkter Stahl"
+    },
+    {
+     "_uid": "59c84b51-ec38-4803-bc91-6e45ccd89e66",
+     "component": "spec-row",
+     "label": "Menge",
+     "value": "50 Stück"
+    },
+    {
+     "_uid": "4ef902d3-c253-45c2-8001-3d4ad1008728",
+     "component": "spec-row",
+     "label": "Profi / DIY",
+     "value": "Profi"
+    },
+    {
+     "_uid": "784923cc-6e73-4f62-97fa-9797b39fe2a4",
+     "component": "spec-row",
+     "label": "GTIN (EAN-Code)",
+     "value": "4048962462012"
+    }
+   ]
+  },
+  {
+   "_uid": "08bc1153-af19-4808-9b10-44194fa8ddcf",
+   "component": "product-variant",
+   "name": "FAZ II Plus 8/100 gvz",
+   "article_number": "564577",
+   "image": {
+    "filename": "https://a.storyblok.com/f/295705770532685/a0cd88db40/fi-pdp-variant-thumb-product.jpg",
+    "alt": ""
+   },
+   "specs": [
+    {
+     "_uid": "c3a36733-98f9-4aac-8576-be940ef614e7",
+     "component": "spec-row",
+     "label": "Bohrernenndurchmesser",
+     "value": "8 mm"
+    },
+    {
+     "_uid": "c284c5a2-5fa4-4a9c-b110-4807a769b5c8",
+     "component": "spec-row",
+     "label": "Max. Nutzlänge hef,stand/hef,min.",
+     "value": "100 / 110 mm"
+    },
+    {
+     "_uid": "68910337-2859-4333-8210-ca37e6ac753c",
+     "component": "spec-row",
+     "label": "Ankerlänge",
+     "value": "165 mm"
+    },
+    {
+     "_uid": "e70f0d29-c8c5-4d2f-adbe-7a11280e1cb5",
+     "component": "spec-row",
+     "label": "Gewinde",
+     "value": "M8"
+    },
+    {
+     "_uid": "3dc3fac4-4f27-407e-b11e-20f2d1aeb84b",
+     "component": "spec-row",
+     "label": "Material",
+     "value": "Galvanisch verzinkter Stahl"
+    },
+    {
+     "_uid": "2fe97214-5304-4a0c-aa86-fa17359a027a",
+     "component": "spec-row",
+     "label": "Menge",
+     "value": "25 Stück"
+    },
+    {
+     "_uid": "5f9483c3-f41e-46ec-a3d5-368ea1b480d7",
+     "component": "spec-row",
+     "label": "Profi / DIY",
+     "value": "Profi"
+    },
+    {
+     "_uid": "373122e8-6f2d-4d10-8946-4a64a727eb81",
+     "component": "spec-row",
+     "label": "GTIN (EAN-Code)",
+     "value": "4048962462029"
+    }
+   ]
+  },
+  {
+   "_uid": "1e6a95a5-5000-467f-beda-482fbfaeb55c",
+   "component": "product-variant",
+   "name": "FAZ II Plus 8/160 gvz",
+   "article_number": "564578",
+   "image": {
+    "filename": "https://a.storyblok.com/f/295705770532685/a0cd88db40/fi-pdp-variant-thumb-product.jpg",
+    "alt": ""
+   },
+   "specs": [
+    {
+     "_uid": "9f77b880-af9a-46d4-914d-faca78309669",
+     "component": "spec-row",
+     "label": "Bohrernenndurchmesser",
+     "value": "8 mm"
+    },
+    {
+     "_uid": "388beb43-71d6-4be5-896f-81f6f4ce29b0",
+     "component": "spec-row",
+     "label": "Max. Nutzlänge hef,stand/hef,min.",
+     "value": "160 / 170 mm"
+    },
+    {
+     "_uid": "71d5380a-a94d-4ca4-bcf7-4707930f77f9",
+     "component": "spec-row",
+     "label": "Ankerlänge",
+     "value": "225 mm"
+    },
+    {
+     "_uid": "2e0f4576-f6d0-4e53-9ee8-c89eec8aa7a9",
+     "component": "spec-row",
+     "label": "Gewinde",
+     "value": "M8"
+    },
+    {
+     "_uid": "ecc0a571-7884-4259-a328-8836d9f56a72",
+     "component": "spec-row",
+     "label": "Material",
+     "value": "Galvanisch verzinkter Stahl"
+    },
+    {
+     "_uid": "e934deaf-c4a7-4513-b5a0-709ebe41c7d5",
+     "component": "spec-row",
+     "label": "Menge",
+     "value": "20 Stück"
+    },
+    {
+     "_uid": "011589bd-4d5c-4bf7-9334-2a20ad3d7e3f",
+     "component": "spec-row",
+     "label": "Profi / DIY",
+     "value": "Profi"
+    },
+    {
+     "_uid": "b82eb5f4-6175-4301-ae27-72fd6580495b",
+     "component": "spec-row",
+     "label": "GTIN (EAN-Code)",
+     "value": "4048962462036"
+    }
+   ]
+  },
+  {
+   "_uid": "ddfeb8dd-b18d-4d5d-9989-648e721d7610",
+   "component": "product-variant",
+   "name": "FAZ II Plus 8/10 E",
+   "article_number": "040549",
+   "image": {
+    "filename": "https://a.storyblok.com/f/295705770532685/a0cd88db40/fi-pdp-variant-thumb-product.jpg",
+    "alt": ""
+   },
+   "specs": [
+    {
+     "_uid": "6abadbd9-915c-4814-ac28-a66a85746d8f",
+     "component": "spec-row",
+     "label": "Bohrernenndurchmesser",
+     "value": "8 mm"
+    },
+    {
+     "_uid": "43c7c127-b29d-40f2-9a4e-9101c2360196",
+     "component": "spec-row",
+     "label": "Max. Nutzlänge hef,stand/hef,min.",
+     "value": "10 / - mm"
+    },
+    {
+     "_uid": "6b64a2d2-6420-479e-bc84-7711e873e8ef",
+     "component": "spec-row",
+     "label": "Ankerlänge",
+     "value": "75 mm"
+    },
+    {
+     "_uid": "b4d8a1b6-b35e-4c5e-97d0-d9552916beee",
+     "component": "spec-row",
+     "label": "Gewinde",
+     "value": "M8"
+    },
+    {
+     "_uid": "f006e706-fea8-4de3-99c7-afc9428d5c62",
+     "component": "spec-row",
+     "label": "Material",
+     "value": "Galvanisch verzinkter Stahl"
+    },
+    {
+     "_uid": "2ab1a4a2-1163-4c05-8548-a927dfe6b6cc",
+     "component": "spec-row",
+     "label": "Menge",
+     "value": "1 Stück"
+    },
+    {
+     "_uid": "232be784-7975-4363-afe2-c53626f17332",
+     "component": "spec-row",
+     "label": "Profi / DIY",
+     "value": "DIY"
+    },
+    {
+     "_uid": "50ec8576-9237-47a1-8663-7decd170d260",
+     "component": "spec-row",
+     "label": "GTIN (EAN-Code)",
+     "value": "4006209405499"
+    }
+   ]
+  },
+  {
+   "_uid": "0c746ec8-ab1f-4065-9ce5-7d99dc9f81d5",
+   "component": "product-variant",
+   "name": "FAZ II Plus 8/10 K (2)",
+   "article_number": "090919",
+   "image": {
+    "filename": "https://a.storyblok.com/f/295705770532685/a0cd88db40/fi-pdp-variant-thumb-product.jpg",
+    "alt": ""
+   },
+   "specs": [
+    {
+     "_uid": "9bf4a447-6880-4926-8e30-58e12e4349e3",
+     "component": "spec-row",
+     "label": "Bohrernenndurchmesser",
+     "value": "8 mm"
+    },
+    {
+     "_uid": "3a809858-9d28-4286-8939-1259ba6ab23d",
+     "component": "spec-row",
+     "label": "Max. Nutzlänge hef,stand/hef,min.",
+     "value": "10 / - mm"
+    },
+    {
+     "_uid": "077b2e75-c616-4737-8be9-d97bf7d13eed",
+     "component": "spec-row",
+     "label": "Ankerlänge",
+     "value": "75 mm"
+    },
+    {
+     "_uid": "2393c4b3-0f04-4592-96ae-b83acbad0b02",
+     "component": "spec-row",
+     "label": "Gewinde",
+     "value": "M8"
+    },
+    {
+     "_uid": "33a3d7a0-7627-4809-b7fa-43d34b9d0301",
+     "component": "spec-row",
+     "label": "Material",
+     "value": "Galvanisch verzinkter Stahl"
+    },
+    {
+     "_uid": "c994d5b3-db76-46aa-9a3f-8c601e141219",
+     "component": "spec-row",
+     "label": "Menge",
+     "value": "2 Stück"
+    },
+    {
+     "_uid": "82e1a8c0-7ef9-4c11-b957-6747fcf5882b",
+     "component": "spec-row",
+     "label": "Profi / DIY",
+     "value": "DIY"
+    },
+    {
+     "_uid": "09b891b8-8ed3-4601-83bb-f2c963c4c731",
+     "component": "spec-row",
+     "label": "GTIN (EAN-Code)",
+     "value": "4006209909195"
+    }
+   ]
+  },
+  {
+   "_uid": "b8355a3f-7d28-4122-b1a2-fa53db300840",
+   "component": "product-variant",
+   "name": "FAZ II Plus 8/10 gvz",
+   "article_number": "564574",
+   "image": {
+    "filename": "https://a.storyblok.com/f/295705770532685/a0cd88db40/fi-pdp-variant-thumb-product.jpg",
+    "alt": ""
+   },
+   "specs": [
+    {
+     "_uid": "d2f006b5-da51-4246-8f3b-990e7756c582",
+     "component": "spec-row",
+     "label": "Bohrernenndurchmesser",
+     "value": "8 mm"
+    },
+    {
+     "_uid": "4e1ac5c6-1e24-47fc-80c9-837d288f1dbe",
+     "component": "spec-row",
+     "label": "Max. Nutzlänge hef,stand/hef,min.",
+     "value": "10 / 20 mm"
+    },
+    {
+     "_uid": "94b002eb-cd09-48f9-83ca-e1d5c7d300a6",
+     "component": "spec-row",
+     "label": "Ankerlänge",
+     "value": "75 mm"
+    },
+    {
+     "_uid": "e998f430-47dc-482b-b310-50f3ba3edb38",
+     "component": "spec-row",
+     "label": "Gewinde",
+     "value": "M8"
+    },
+    {
+     "_uid": "c06bdd5e-1013-441c-9bc7-c9f1bc457a5e",
+     "component": "spec-row",
+     "label": "Material",
+     "value": "Galvanisch verzinkter Stahl"
+    },
+    {
+     "_uid": "280e1d96-f439-4168-af04-03e230689577",
+     "component": "spec-row",
+     "label": "Menge",
+     "value": "50 Stück"
+    },
+    {
+     "_uid": "72fe6bb4-a2f8-4231-b545-f6571cf4493e",
+     "component": "spec-row",
+     "label": "Profi / DIY",
+     "value": "Profi"
+    },
+    {
+     "_uid": "b800aee1-e8a6-4f86-9d5c-c51882ef3e66",
+     "component": "spec-row",
+     "label": "GTIN (EAN-Code)",
+     "value": "4048962461992"
+    }
+   ]
+  },
+  {
+   "_uid": "8bb68a6f-8beb-486c-aa98-d9608c930f27",
+   "component": "product-variant",
+   "name": "FAZ II Plus 8/30 E",
+   "article_number": "046976",
+   "image": {
+    "filename": "https://a.storyblok.com/f/295705770532685/a0cd88db40/fi-pdp-variant-thumb-product.jpg",
+    "alt": ""
+   },
+   "specs": [
+    {
+     "_uid": "52eecebd-bb4d-4417-a572-fe21cbd255f3",
+     "component": "spec-row",
+     "label": "Bohrernenndurchmesser",
+     "value": "8 mm"
+    },
+    {
+     "_uid": "f8bce425-422f-45f5-9547-8d04bd55e64e",
+     "component": "spec-row",
+     "label": "Max. Nutzlänge hef,stand/hef,min.",
+     "value": "30 / 40 mm"
+    },
+    {
+     "_uid": "4de99bc6-d5d0-41cb-9ad6-dced5b047674",
+     "component": "spec-row",
+     "label": "Ankerlänge",
+     "value": "95 mm"
+    },
+    {
+     "_uid": "209fed5a-2b31-442f-b26c-d1c5a657aa09",
+     "component": "spec-row",
+     "label": "Gewinde",
+     "value": "M8"
+    },
+    {
+     "_uid": "a5066ee9-6e9e-4029-8044-08b0ff09652a",
+     "component": "spec-row",
+     "label": "Material",
+     "value": "Galvanisch verzinkter Stahl"
+    },
+    {
+     "_uid": "38553d4c-27d4-43e4-a197-aed992448910",
+     "component": "spec-row",
+     "label": "Menge",
+     "value": "1 Stück"
+    },
+    {
+     "_uid": "6add72b0-deaa-4dd7-9dd7-4bfc016bfe0b",
+     "component": "spec-row",
+     "label": "Profi / DIY",
+     "value": "DIY, Profi"
+    },
+    {
+     "_uid": "e89c2708-8e8c-406b-b792-8a64a87b3091",
+     "component": "spec-row",
+     "label": "GTIN (EAN-Code)",
+     "value": "4006209469767"
+    }
+   ]
+  },
+  {
+   "_uid": "d7477a47-f906-48cf-9942-549db5b172b7",
+   "component": "product-variant",
+   "name": "FAZ II Plus 8/30 gvz",
+   "article_number": "564575",
+   "image": {
+    "filename": "https://a.storyblok.com/f/295705770532685/a0cd88db40/fi-pdp-variant-thumb-product.jpg",
+    "alt": ""
+   },
+   "specs": [
+    {
+     "_uid": "c13fb1fa-3122-46a4-9be1-32928dd8139e",
+     "component": "spec-row",
+     "label": "Bohrernenndurchmesser",
+     "value": "8 mm"
+    },
+    {
+     "_uid": "3c795f9f-d635-4743-beab-15e00f56e241",
+     "component": "spec-row",
+     "label": "Max. Nutzlänge hef,stand/hef,min.",
+     "value": "30 / 40 mm"
+    },
+    {
+     "_uid": "54bb00ea-5c6e-4bab-82a0-aad730ed4571",
+     "component": "spec-row",
+     "label": "Ankerlänge",
+     "value": "95 mm"
+    },
+    {
+     "_uid": "eae1ca5d-326f-470d-8e74-376a074cd1a8",
+     "component": "spec-row",
+     "label": "Gewinde",
+     "value": "M8"
+    },
+    {
+     "_uid": "56135bc7-41d8-4d84-bf3f-e4416ebacbc7",
+     "component": "spec-row",
+     "label": "Material",
+     "value": "Galvanisch verzinkter Stahl"
+    },
+    {
+     "_uid": "2774276c-352d-4c16-8196-e50729c144e1",
+     "component": "spec-row",
+     "label": "Menge",
+     "value": "50 Stück"
+    },
+    {
+     "_uid": "b145f55b-e9de-4cf3-b848-138760994958",
+     "component": "spec-row",
+     "label": "Profi / DIY",
+     "value": "Profi"
+    },
+    {
+     "_uid": "6b019e11-4a48-4ab9-8dd3-380bbf00cd8a",
+     "component": "spec-row",
+     "label": "GTIN (EAN-Code)",
+     "value": "4048962462005"
+    }
+   ]
+  }
+ ],
+ "variant_count": 53,
+ "details": [
+  {
+   "_uid": "ce99131d-4a5b-4ee7-a7bb-333e3eabd1fa",
+   "component": "accordion-item",
+   "headline": "Die Vorteile / Produktbeschreibung",
+   "body": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "bullet_list",
+      "content": [
+       {
+        "type": "list_item",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "Schnelle und einfachere Montage ohne Bohrlochreinigung (M8-M24)."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "list_item",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "Zahlreiche Prüfgutachten für unterschiedliche Untergrundmaterialien (Beton C12/15-C80/95, Stahlfaserbeton (aBG), Kalksandvollstein) erhöhen die Anzahl der Einsatz- und Anwendungsfelder."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "list_item",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "Mit der neuen Bewertung (ETA) erhöhen sich die Quertragfähigkeiten entscheidend. Dadurch werden weniger Befestigungspunkte und Anker benötigt."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "list_item",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "Die neue ETA bestätigt den Einsatz des FAZ II Plus für dynamische Beanspruchung für die Durchmesser M16-M24."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "list_item",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "Der schnelle Montagevorgang des FAZ II Plus ermöglicht für dynamische Anwendungen mit geringen Lastzyklen (M16-24) eine effiziente Befestigungslösung mit einer direkten Belastbarkeit des Befestigungspunkts."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "list_item",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "Die ETA Bewertung stellt zusammen mit weiteren Prüfgutachten (RWS, ZTV, ETK) hohe Lasten im Brandfall sicher."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "list_item",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "Der FAZ II Plus ermöglicht die Aufnahme von hohen seismischen Lasten der Leistungskategorie C1 und C2 für die Durchmesser M10-M24 mit und ohne Verwendung der Verfüllscheibe FFD bei der Installation."
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   "rows": []
+  },
+  {
+   "_uid": "d024fcc2-6950-4891-b467-836f5c9c9a0d",
+   "component": "accordion-item",
+   "headline": "Anwendung und Zulassung",
+   "body": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "bullet_list",
+      "content": [
+       {
+        "type": "list_item",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "Stahlkonstruktionen"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "list_item",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "Geländer"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "list_item",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "Konsolen"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "list_item",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "Leitern"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "list_item",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "Kabeltrassen"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "list_item",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "Maschinen"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "list_item",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "Treppen"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "list_item",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "Fassaden"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "list_item",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "Holzkonstruktionen"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "list_item",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "Baustoffe"
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   "rows": []
+  },
+  {
+   "_uid": "9579b672-0db8-4290-aed7-80d9c72c29b7",
+   "component": "accordion-item",
+   "headline": "Montageanleitung",
+   "body": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "text": "Der FAZ II Plus ist geeignet für die Vor- und Durchsteckmontage und durch das lange Gewinde auch optimal für Abstandsmontagen."
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "text": "Beim Anziehen der Mutter wird der Konusbolzen in den Spreizclip gezogen und verspannt diesen gegen die Bohrlochwand."
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "text": "Bei Erreichen des vorgegebenen Drehmoments ist der Anker zulassungskonform gesetzt."
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "text": "Bei Serienmontage empfehlen wir die Verwendung der Bolzenanker-Setzwerkzeuge FABS bzw. FA-ST II."
+       }
+      ]
+     }
+    ]
+   },
+   "rows": []
+  },
+  {
+   "_uid": "82ca2791-6f6a-4b5f-a0c3-321eccafc98e",
+   "component": "accordion-item",
+   "headline": "Dokumente zum Download",
+   "body": {
+    "type": "doc",
+    "content": [
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "text": "ETA-19/0520 – Europäische Technische Bewertung für fischer Bolzenanker FAZ II Plus, FAZ II Plus R, FAZ II Plus HCR - Mechanische Dübel zur Verwendung im Beton"
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "text": "DoP No. 0334 – Leistungserklärung für fischer Bolzenanker FAZ II Plus, FAZ II Plus R, FAZ II Plus HCR (Mechanischer Dübel für den Einsatz in Beton)"
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "text": "ETA-20/0897 – Europäische Technische Bewertung für fischer Bolzenanker FAZ II Plus dynamic - Nachträglich eingebaute Befestigungsmittel in Beton unter ermüdungsrelevanter zyklischer Beanspruchung"
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "text": "DoP No. 0337 – Leistungserklärung für fischer Bolzenanker FAZ II Plus dynamic (Nachträgliche Befestigung in gerissenem oder ungerissenem Beton)"
+       }
+      ]
+     }
+    ]
+   },
+   "rows": []
+  }
+ ],
+ "body": [],
+ "related_headline": "Ähnliche Produkte",
+ "related_products": [],
+ "_related": [
+  {
+   "uuid": "56dd606a-f0da-4a3e-a42b-cf18e0d4e8f1",
+   "full_slug": "fischer/produkte/stahlanker/faz-ii-plus-gvz-bolzenanker",
+   "content": {
+    "component": "product",
+    "name": "FAZ II Plus gvz",
+    "eyebrow": "Bolzenanker",
+    "gallery": [
+     {
+      "filename": "https://a.storyblok.com/f/295705770532685/1ccd77eec6/fi-cat-prod-faz-ii-plus-gvz.jpg",
+      "alt": "FAZ II Plus gvz"
+     }
+    ],
+    "features": {
+     "type": "doc",
+     "content": [
+      {
+       "type": "bullet_list",
+       "content": [
+        {
+         "type": "list_item",
+         "content": [
+          {
+           "type": "paragraph",
+           "content": [
+            {
+             "type": "text",
+             "text": "Galvanisch verzinkter Stahl"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    "variant_count": 53
+   }
+  },
+  {
+   "uuid": "9cbe13f2-dc5f-42df-ae84-10b66a1c285a",
+   "full_slug": "fischer/produkte/stahlanker/faz-ii-plus-r-bolzenanker",
+   "content": {
+    "component": "product",
+    "name": "FAZ II Plus R",
+    "eyebrow": "Bolzenanker",
+    "gallery": [
+     {
+      "filename": "https://a.storyblok.com/f/295705770532685/87769c38d2/fi-cat-prod-faz-ii-plus-r.jpg",
+      "alt": "FAZ II Plus R"
+     }
+    ],
+    "features": {
+     "type": "doc",
+     "content": [
+      {
+       "type": "bullet_list",
+       "content": [
+        {
+         "type": "list_item",
+         "content": [
+          {
+           "type": "paragraph",
+           "content": [
+            {
+             "type": "text",
+             "text": "Nichtrostender Stahl"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    "variant_count": 30
+   }
+  },
+  {
+   "uuid": "4b26d864-5ffc-4fe7-a73c-1fb116da8363",
+   "full_slug": "fischer/produkte/stahlanker/faz-ii-plus-hcr-bolzenanker",
+   "content": {
+    "component": "product",
+    "name": "FAZ II Plus HCR",
+    "eyebrow": "Bolzenanker",
+    "gallery": [
+     {
+      "filename": "https://a.storyblok.com/f/295705770532685/2b15e35303/fi-cat-prod-faz-ii-plus-hcr.jpg",
+      "alt": "FAZ II Plus HCR"
+     }
+    ],
+    "features": {
+     "type": "doc",
+     "content": [
+      {
+       "type": "bullet_list",
+       "content": [
+        {
+         "type": "list_item",
+         "content": [
+          {
+           "type": "paragraph",
+           "content": [
+            {
+             "type": "text",
+             "text": "Hochkorrosionsbeständiger Stahl"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    "variant_count": 8
+   }
+  },
+  {
+   "uuid": "28e33f84-913b-41d1-90a4-536335c69cd1",
+   "full_slug": "fischer/produkte/stahlanker/faz-ii-plus-k-gvz-bolzenanker",
+   "content": {
+    "component": "product",
+    "name": "FAZ II Plus K gvz",
+    "eyebrow": "Bolzenanker",
+    "gallery": [
+     {
+      "filename": "https://a.storyblok.com/f/295705770532685/34da228ada/fi-cat-prod-faz-ii-plus-k-gvz.jpg",
+      "alt": "FAZ II Plus K gvz"
+     }
+    ],
+    "features": {
+     "type": "doc",
+     "content": [
+      {
+       "type": "bullet_list",
+       "content": [
+        {
+         "type": "list_item",
+         "content": [
+          {
+           "type": "paragraph",
+           "content": [
+            {
+             "type": "text",
+             "text": "Kurzversion"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "list_item",
+         "content": [
+          {
+           "type": "paragraph",
+           "content": [
+            {
+             "type": "text",
+             "text": "Galvanisch verzinkter Stahl"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    "variant_count": 6
+   }
+  },
+  {
+   "uuid": "74f1b473-47e4-42ef-8dfc-bb1fe338f483",
+   "full_slug": "fischer/produkte/stahlanker/faz-ii-plus-k-r-bolzenanker",
+   "content": {
+    "component": "product",
+    "name": "FAZ II Plus K R",
+    "eyebrow": "Bolzenanker",
+    "gallery": [
+     {
+      "filename": "https://a.storyblok.com/f/295705770532685/0c007745ba/fi-cat-prod-faz-ii-plus-k-r.jpg",
+      "alt": "FAZ II Plus K R"
+     }
+    ],
+    "features": {
+     "type": "doc",
+     "content": [
+      {
+       "type": "bullet_list",
+       "content": [
+        {
+         "type": "list_item",
+         "content": [
+          {
+           "type": "paragraph",
+           "content": [
+            {
+             "type": "text",
+             "text": "Kurzversion"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "list_item",
+         "content": [
+          {
+           "type": "paragraph",
+           "content": [
+            {
+             "type": "text",
+             "text": "Nichtrostender Stahl"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    "variant_count": 5
+   }
+  },
+  {
+   "uuid": "fb35da52-5be9-4b8c-9822-84b521ad7aa8",
+   "full_slug": "fischer/produkte/stahlanker/faz-ii-plus-gs-gvz-bolzenanker",
+   "content": {
+    "component": "product",
+    "name": "FAZ II Plus GS gvz",
+    "eyebrow": "Bolzenanker",
+    "gallery": [
+     {
+      "filename": "https://a.storyblok.com/f/295705770532685/2818fdeb9d/fi-cat-prod-faz-ii-plus-gs-gvz.jpg",
+      "alt": "FAZ II Plus GS gvz"
+     }
+    ],
+    "features": {
+     "type": "doc",
+     "content": [
+      {
+       "type": "bullet_list",
+       "content": [
+        {
+         "type": "list_item",
+         "content": [
+          {
+           "type": "paragraph",
+           "content": [
+            {
+             "type": "text",
+             "text": "Mit großer Scheibe"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "list_item",
+         "content": [
+          {
+           "type": "paragraph",
+           "content": [
+            {
+             "type": "text",
+             "text": "Galvanisch verzinkter Stahl"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    "variant_count": 19
+   }
+  }
+ ],
+ "title": "",
+ "description": "",
+ "og_image": {}
+}
